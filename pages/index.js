@@ -10,6 +10,10 @@ Page({
         url: './plugin/index/index',
       },
       {
+        title: 'TODO清单',
+        url: './todo/index',
+      },
+      {
         title: '外汇牌价',
         url: './exchange/list/list',
       },

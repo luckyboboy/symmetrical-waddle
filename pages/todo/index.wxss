@@ -4,6 +4,9 @@
 
 input {
   color: #666;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px;
 }
 
 .list {
@@ -11,4 +14,27 @@ input {
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
+}
+
+.main {
+  padding: 0 10px;
+}
+
+.list {
+  margin: 5px 0;
+}
+
+.list .item {
+  margin: 3px 0;
+}
+
+.delete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.delete image {
+  width: 18px;
+  height: 18px;
 }

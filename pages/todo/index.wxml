@@ -4,6 +4,6 @@
     <view class="item">
       {{item.title}}
     </view>
-    <view class="delete" bindtap="delete" data-index="{{index}}">X</view>
+    <view class="delete" bindtap="delete" data-index="{{index}}"><image src="/images/clear.png" /></view>
   </view>
 </view>

@@ -1,13 +1,12 @@
 <view class="main">
-  <input type="text" name="title" value="新的一条记录" class="add" placeholder="请输入记录内容" placeholder-class="input-placeholder" auto-focus bindconfirm="add" />
+  <input type="text" name="title" value="" class="add" placeholder="请输入记录内容" confirm-type="done" placeholder-class="input-placeholder" auto-focus bindconfirm="add" />
   <checkbox-group bindchange="checkboxChange">
     <label wx:for="{{todos}}" class="list" wx:key="">
       <checkbox value="{{index}}" checked="{{item.checked}}" />
       <view class="item">
         <!-- <view bindtap="editing" data-index="{{index}}" wx:if="{{currentIndex !== index && !editing}}">{{item.title}}</view> -->
-        <input name="editor" catchtap="editing" data-index="{{index}}" value="{{item.title}}" disabled="{{currentIndex !== index}}" focus="{{currentIndex === index}}" class="black {{currentIndex !== index ? 'input-disabled' : 'input-enabled'}}" bindconfirm="edit" />
+        <input name="editor" catchtap="editing" data-index="{{index}}" value="{{item.title}}" disabled="{{currentIndex !== index}}" focus="{{currentIndex === index}}" class="black {{currentIndex !== index ? 'input-disabled' : 'input-enabled'}}" bindconfirm="edit" bindblur="bindblur" />
       </view>
-      <!-- <view class="delete" bindtap="delete" data-index="{{index}}"><image src="/images/clear.png" /></view> -->
     </label>
   </checkbox-group>
 </view>

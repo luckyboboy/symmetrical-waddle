@@ -4,7 +4,7 @@
 
 input {
   color: #666;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   border-radius: 4px;
   padding: 6px;
 }
@@ -29,7 +29,7 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 }
 
 .main {

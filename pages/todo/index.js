@@ -24,7 +24,14 @@ Page({
     // })
   },
   add (e) {
+    // 获取文本框里的内容
     const title = e.detail.value
+    if (!title) {
+      wx.showToast({
+        title: '请输入内容'
+      })
+      return
+    }
     let todos = this.data.todos
     let todo = {
       title: title,
@@ -35,14 +42,6 @@ Page({
       todos: todos
     })
   },
-  // delete (e) {
-  //   const index = e.currentTarget.dataset.index
-  //   let todos = this.data.todos
-  //   todos.splice(index, 1)
-  //   this.setData({
-  //     todos: todos
-  //   })
-  // },
   editing (e) {
     const index = e.currentTarget.dataset.index
     this.setData({
@@ -98,5 +97,11 @@ Page({
         }
       })
     }
-    }
+  },
+  // 失去焦点
+  bindblur (e) {
+    this.setData({
+      currentIndex: -1
+    })
+  }
 })

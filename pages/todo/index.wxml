@@ -2,7 +2,8 @@
   <input type="text" name="title" value="新的一条记录" placeholder="请输入记录内容" placeholder-class="input-placeholder" focus="true" bindconfirm="add" />
   <view class="list" wx:for="{{todos}}" wx:key="">
     <view class="item">
-      {{item.title}}
+      <view bindtap="editing" data-index="{{index}}" wx:if="{{currentIndex !== index}}">{{item.title}}</view>
+      <input name="editor" data-index="{{index}}" value="{{item.title}}" wx:if="{{currentIndex === index}}" bindconfirm="edit" />
     </view>
     <view class="delete" bindtap="delete" data-index="{{index}}"><image src="/images/clear.png" /></view>
   </view>

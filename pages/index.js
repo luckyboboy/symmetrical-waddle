@@ -18,6 +18,10 @@ Page({
         url: './radiogroup/index',
       },
       {
+        title: '动态数字',
+        url: './number/number',
+      },
+      {
         title: '弹窗',
         url: './alert/index',
       },

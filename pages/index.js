@@ -15,11 +15,11 @@ Page({
       },
       {
         title: 'TODO微信云开发',
-        url: './todo-zx/index',
+        url: './todo-cloud/index',
       },
       {
         title: 'TODO知晓云开发',
-        url: './todo-cloud/index',
+        url: './todo-zx/index',
       },
       {
         title: 'VantUI购物车',

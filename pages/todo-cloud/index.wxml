@@ -1,0 +1,18 @@
+<!-- 操作区域主体内容 -->
+<view class="main">
+  <input type="text" name="title" value="{{title}}" class="add" placeholder="请输入记录内容" confirm-type="done" placeholder-class="input-placeholder" auto-focus bindconfirm="add" />
+  <!-- 使用checkbox-group作为容器，方便勾选 -->
+  <checkbox-group bindchange="checkboxChange">
+    <!-- 遍历数据源 -->
+    <label wx:for="{{todos}}" class="list" wx:key="">
+      <!-- 复选按钮，取值就是index值，回传checkbox改变事件回调 -->
+      <checkbox value="{{index}}" checked="{{item.checked}}" />
+      <!-- 文本框，由于currentIndex的存在而具有高亮状态 -->
+      <input name="editor" catchtap="editing" data-index="{{index}}" value="{{item.title}}" disabled="{{currentIndex !== index}}" focus="{{currentIndex === index}}" class="input-common {{currentIndex !== index ? 'input-disabled' : 'input-enabled'}}" bindconfirm="edit" bindblur="bindblur" />
+    </label>
+  </checkbox-group>
+</view>
+<!-- 删除按钮容器 -->
+<view class="delete-container">
+  <button type="warn" class="delete-all" bindtap="deleteAll">删除</button>
+</view>

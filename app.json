@@ -4,6 +4,7 @@
     "pages/vant/cart",
     "pages/plugin/index/index",
     "pages/todo/index",
+    "pages/todo-cloud/index",
     "pages/npm/index",
     "pages/number/number",
     "pages/ocr/index/index",

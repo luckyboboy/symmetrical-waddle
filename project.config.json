@@ -35,13 +35,18 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "pages/todo/index",
-					"pathName": "pages/todo/index",
+					"pathName": "pages/todo-cloud/index",
+					"query": "",
 					"scene": null
 				}
 			]

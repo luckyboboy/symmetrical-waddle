@@ -14,6 +14,10 @@ Page({
         url: './todo/index',
       },
       {
+        title: 'TODO云开发',
+        url: './todo-cloud/index',
+      },
+      {
         title: 'VantUI购物车',
         url: './todo/index',
       },

@@ -1,0 +1,14 @@
+<van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}" wx:for="{{carts}}" class="carts-container" wx:key="index">
+  <van-card
+      num="{{item.quantity}}"
+      price="{{item.goods.price}}"
+      title="{{item.goods.title}}"
+      thumb="{{item.goods.thumb[0].url}}"
+    >
+    <view slot="bottom">
+      <van-stepper value="{{ 1 }}" bind:change="onChange" />
+    </view>
+  </van-card>
+  <view slot="right">删除</view>
+</van-swipe-cell>
+<van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onSubmit" />

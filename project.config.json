@@ -13,7 +13,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.1",
+	"libVersion": "2.9.4",
 	"appid": "wxa4efe9d27200be7f",
 	"projectname": "Mina%E7%BB%84%E4%BB%B6%E5%BA%93",
 	"simulatorType": "wechat",

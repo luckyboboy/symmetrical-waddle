@@ -1,15 +1,6 @@
 Page({
   data: {
     todos: [
-      {
-        title: '明天9点打电话给老张'
-      },
-      {
-        title: '打电话给老王'
-      },
-      {
-        title: '打电话'
-      }
     ]
   },
   onLoad() {
@@ -64,6 +55,7 @@ Page({
         wx.showToast({
           title: '新增记录成功'
         })
+        this.onQuery()
         console.log('[数据库] [新增记录] 成功，记录 _id: ', res._id)
       },
       fail: err => {

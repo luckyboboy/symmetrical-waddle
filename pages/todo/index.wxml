@@ -1,6 +1,6 @@
 <!-- 操作区域主体内容 -->
 <view class="main">
-  <input type="text" name="title" value="" class="add" placeholder="请输入记录内容" confirm-type="done" placeholder-class="input-placeholder" auto-focus bindconfirm="add" />
+  <input type="text" name="title" value="{{title}}" class="add" placeholder="请输入记录内容" confirm-type="done" placeholder-class="input-placeholder" auto-focus bindconfirm="add" />
   <!-- 使用checkbox-group作为容器，方便勾选 -->
   <checkbox-group bindchange="checkboxChange">
     <!-- 遍历数据源 -->

@@ -13,7 +13,8 @@ Page({
     ]
   },
   onLoad() {
-    // 调用模拟数据代码
+    // 调用模拟数据代码，需要时打开下面的注释
+    // this.mock()
   },
   // 模拟长列表数据源
   mock() {
@@ -49,7 +50,8 @@ Page({
     todos.push(todo)
     // 保存数据源
     this.setData({
-      todos: todos
+      todos: todos,
+      title: ''
     })
   },
   editing(e) {
@@ -107,9 +109,10 @@ Page({
             checkIndices.forEach(item => {
               todos.splice(item, 1)
             })
-            // 保存数据源
+            // 保存数据源，同时checkIndices将它复位
             this.setData({
-              todos: todos
+              todos: todos,
+              checkIndices: []
             })
             // 给出提示框
             wx.showToast({
@@ -117,6 +120,10 @@ Page({
             })
           }
         }
+      })
+    } else {
+      wx.showToast({
+        title: '请先勾选'
       })
     }
   },

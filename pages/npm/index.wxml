@@ -1,2 +1,1 @@
-<view>{{arr}}</view>
-<view>最小值是: {{min}}</view>
+<view>{{arr}}中最小值是: {{min}}</view>

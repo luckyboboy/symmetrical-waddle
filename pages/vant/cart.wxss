@@ -43,3 +43,10 @@ view.label-class {
 .all {
   margin-left: 10px;
 }
+
+/* 商品数量 */
+.stepper-slot {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

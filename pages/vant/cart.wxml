@@ -2,9 +2,9 @@
   <van-checkbox-group value="{{ result }}" bind:change="checkboxGroupChange">
     <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}" wx:for="{{carts}}" wx:key="index">
       <van-checkbox custom-class="custom-class" label-class="label-class" name="{{item._id}}">
-        <van-card num="{{item.quantity}}" price="{{item.goods.price}}" title="{{item.goods.title}}" thumb="{{item.goods.thumb[0].url}}">
-          <view slot="bottom">
-            <van-stepper value="{{ 1 }}" bind:change="onChange" />
+        <van-card price="{{item.goods.price}}" title="{{item.goods.title}}" thumb="{{item.goods.thumb[0].url}}">
+          <view slot="bottom" class="stepper-slot">
+            <van-stepper value="{{ item.quantity }}" bind:change="onChange" />
           </view>
         </van-card>
       </van-checkbox>

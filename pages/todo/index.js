@@ -6,6 +6,9 @@ Page({
     },{
       title: '打电话给老王',
       checked: false
+    },{
+      title: '打电话',
+      checked: false
     }]
   },
   onLoad () {
@@ -47,6 +50,26 @@ Page({
     this.setData({
       todos: todos,
       currentIndex: -1
+    })
+  },
+  checkboxChange(e) {
+    const values = e.detail.value
+    this.setData({
+      checkIndices: values
+    })
+  },
+  // 批量删除
+  deleteAll () {
+    // 从后往前遍历
+    const checkIndices = this.data.checkIndices
+    let todos = this.data.todos
+    // debugger
+    for (let i = checkIndices.length - 1; i >= 0; i--) {
+      todos.splice(checkIndices[i], 1)
+    }
+    // debugger
+    this.setData({
+      todos: todos
     })
   }
 })

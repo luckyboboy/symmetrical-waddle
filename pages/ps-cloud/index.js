@@ -16,24 +16,42 @@ Page({
           origin: file
         })
         console.log(file)
-        wx.uploadFile({
-          url: 'http://localhost:4114/ps/upload', //仅为示例，非真实的接口地址
-          filePath: file,
-          name: 'image',
-          success: res => {
-            const data = res.data
-            let url = 
-              'data:image/png;base64,' + data
-            this.setData({
-              url: url
+        wx.getFileSystemManager().readFile({
+          filePath: file, //选择图片返回的相对路径
+          encoding: 'base64', //编码格式
+          success: res => { //成功的回调
+            wx.cloud.callFunction({
+              name:'ps',
+              data:{
+                file: res.data
+              },
+              success(_res){
+               
+                console.log(_res)
+              },fail(_res){
+                console.log(_res)
+              }
             })
-            //do something
-          },
-          fail(err) {
-            console.log('请求失败')
-            console.log(err)
           }
         })
+        // wx.uploadFile({
+        //   url: 'http://localhost:4114/ps/upload', //仅为示例，非真实的接口地址
+        //   filePath: file,
+        //   name: 'image',
+        //   success: res => {
+        //     const data = res.data
+        //     let url = 
+        //       'data:image/png;base64,' + data
+        //     this.setData({
+        //       url: url
+        //     })
+        //     //do something
+        //   },
+        //   fail(err) {
+        //     console.log('请求失败')
+        //     console.log(err)
+        //   }
+        // })
       }
     })
   }

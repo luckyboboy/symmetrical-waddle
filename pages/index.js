@@ -30,7 +30,7 @@ Page({
         url: './ps/index',
       },
       {
-        title: 'PS抠图',
+        title: 'PS抠图云函数版',
         url: './ps-cloud/index',
       },
       {

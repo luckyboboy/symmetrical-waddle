@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index",
+    "pages/plugin/index/index",
     "pages/todo/index",
     "pages/npm/index",
     "pages/number/number",
@@ -22,6 +23,12 @@
     "pages/alert/index",
     "pages/radiogroup/index"
   ],
+  "plugins": {
+    "myPlugin": {
+      "version": "1.1.1",
+      "provider": "wx5dd91767730ed427"
+    }
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

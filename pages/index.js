@@ -6,6 +6,10 @@ Page({
         url: './task/list/list',
       },
       {
+        title: '使用插件',
+        url: './plugin/index/index',
+      },
+      {
         title: '外汇牌价',
         url: './exchange/list/list',
       },

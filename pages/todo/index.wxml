@@ -10,5 +10,7 @@
       <view class="delete" bindtap="delete" data-index="{{index}}"><image src="/images/clear.png" /></view>
     </label>
   </checkbox-group>
-  <button type="warn" bindtap="deleteAll">删除</button>
 </view>
+    <view class="delete-all">
+      <button type="warn" class="delete-all" bindtap="deleteAll">删除</button>
+    </view>

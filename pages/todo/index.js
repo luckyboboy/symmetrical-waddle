@@ -12,16 +12,16 @@ Page({
     }]
   },
   onLoad () {
+    // mock
     const todos = []
     for (let index = 0; index < 12; index++) {
       todos.push({
         title: index
       })
-      
     }
-    this.setData({
-      todos: todos
-    })
+    // this.setData({
+    //   todos: todos
+    // })
   },
   add (e) {
     const title = e.detail.value

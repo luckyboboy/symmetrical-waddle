@@ -26,6 +26,8 @@ input {
 
 .main {
   padding: 0 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .list {
@@ -46,4 +48,18 @@ input {
 .delete image {
   width: 18px;
   height: 18px;
+}
+
+view.delete-all {
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+button.delete-all {
+  width: 100%;
 }

@@ -5,6 +5,7 @@
     "pages/plugin/index/index",
     "pages/todo/index",
     "pages/todo-cloud/index",
+    "pages/todo-zx/index",
     "pages/npm/index",
     "pages/number/number",
     "pages/ocr/index/index",

@@ -1,0 +1,64 @@
+/* 主体区域的样式，设定内外边距 */
+.main {
+  padding: 0 10px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+/* 文本框通用样式 */
+input {
+  color: #666;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 6px;
+}
+
+/* 文本框placeholder占位字符的样式 */
+input.input-placeholder {
+  color: #999;
+}
+
+/* 页首添加用文本框背景色 */
+.add {
+  background-color: white;
+}
+
+/* 文本内容的flex布局 */
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+/* 不论高亮与否都需要具备的样式 */
+.input-common {
+  color: #000;
+  flex: 1;
+}
+
+/* 非高亮时的样式 */
+.input-disabled {
+  border: 1px solid #F8F8F8
+}
+
+/* 高亮时的样式 */
+ .input-enabled {
+  background: white;
+}
+
+view.delete-container {
+  z-index: 99;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: #F8F8F8;
+}
+
+button.delete-all {
+  margin: 10px;
+}

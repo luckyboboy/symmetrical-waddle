@@ -65,6 +65,13 @@
 					"pathName": "pages/ps/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/todo-zx/index",
+					"pathName": "pages/todo-zx/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

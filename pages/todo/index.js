@@ -12,7 +12,16 @@ Page({
     }]
   },
   onLoad () {
-
+    const todos = []
+    for (let index = 0; index < 12; index++) {
+      todos.push({
+        title: index
+      })
+      
+    }
+    this.setData({
+      todos: todos
+    })
   },
   add (e) {
     const title = e.detail.value
@@ -65,8 +74,14 @@ Page({
     let todos = this.data.todos
     // debugger
     for (let i = checkIndices.length - 1; i >= 0; i--) {
-      todos.splice(checkIndices[i], 1)
     }
+    checkIndices.sort((a, b) => {
+      return a - b
+    }).reverse()
+    checkIndices.forEach(item => {
+      todos.splice(item, 1)
+      
+    })
     // debugger
     this.setData({
       todos: todos

@@ -1,0 +1,10 @@
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.images image{
+  flex: 1;
+}

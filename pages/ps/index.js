@@ -19,19 +19,11 @@ Page({
         wx.uploadFile({
           url: 'http://localhost:4114/ps/upload', //仅为示例，非真实的接口地址
           filePath: file,
-          responseType: 'arraybuffer',
           name: 'image',
           success: res => {
             const data = res.data
-            console.log(data)
-            // const base64 = wx.arrayBufferToBase64(data)
-            const base64 = data.toString('base64')
-            console.log('base64')
-            console.log(base64)
             let url = 
-              'data:image/png;base64,' + base64
-            console.log('url')
-            console.log(url)
+              'data:image/png;base64,' + data
             this.setData({
               url: url
             })

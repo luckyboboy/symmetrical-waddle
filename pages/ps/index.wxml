@@ -1,5 +1,7 @@
 <button class="btn" type="primary" loading="{{loading}}" disabled="{{disabled}}" bindtap="onTap">
   上传
 </button>
-<image src="{{origin}}" mode="widthFix" />
-<image src="{{url}}" mode="widthFix" />
+<view class="images">
+  <image src="{{origin}}" mode="widthFix" />
+  <image src="{{url}}" mode="widthFix" />
+</view>

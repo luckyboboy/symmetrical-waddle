@@ -9,12 +9,20 @@ input {
   padding: 6px;
 }
 
+.add {
+  background-color: white;
+}
+
 .black {
   color: #000;
 }
 
 .input-disabled {
   border: 1px solid #F8F8F8
+}
+
+.input-enabled {
+  background: white;
 }
 
 .list {

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/number/number",
     "pages/index",
     "pages/ocr/index/index",
     "pages/counter/index/index",

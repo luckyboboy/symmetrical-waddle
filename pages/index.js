@@ -14,6 +14,10 @@ Page({
         url: './ocr/index/index',
       },
       {
+        title: 'npm模块',
+        url: './npm/index',
+      },
+      {
         title: '分段组件',
         url: './radiogroup/index',
       },
@@ -65,5 +69,5 @@ Page({
 			desc: '汇集高频使用的组件',
 			path: '/pages/index'
 		}
-	},
+  }
 })

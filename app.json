@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index",
+    "pages/npm/index",
     "pages/number/number",
     "pages/ocr/index/index",
     "pages/counter/index/index",

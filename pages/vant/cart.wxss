@@ -28,8 +28,7 @@
   margin-left: 10px;
 }
 
-/* 复选框label样式 */
-view.van-checkbox__label {
+view.label-class {
   margin-left: 0;
 }
 
@@ -38,4 +37,9 @@ view.van-checkbox__label {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* 全选与全不选 */
+.all {
+  margin-left: 10px;
 }

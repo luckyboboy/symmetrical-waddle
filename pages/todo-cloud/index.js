@@ -1,7 +1,6 @@
 Page({
   data: {
-    todos: [
-    ]
+    todos: []
   },
   onLoad() {
     // 调用模拟数据代码，需要时打开下面的注释
@@ -67,26 +66,42 @@ Page({
       }
     })
   },
-  // 查询
-  onQuery: function() {
+  // 修改
+  onUpdate(todo) {
     const db = wx.cloud.database()
-    // 查询当前用户所有的 counters
     db.collection('todos')
-      .get({
+      .doc(todo._id)
+      .update({
+        data: {
+          title: todo.title
+        },
         success: res => {
-          this.setData({
-            todos: res.data
-          })
-          console.log('[数据库] [查询记录] 成功: ', res)
+          this.onQuery()
         },
         fail: err => {
-          wx.showToast({
-            icon: 'none',
-            title: '查询记录失败'
-          })
-          console.error('[数据库] [查询记录] 失败：', err)
+          icon: 'none', console.error('[数据库] [更新记录] 失败：', err)
         }
       })
+  },
+  // 查询
+  onQuery() {
+    const db = wx.cloud.database()
+    // 查询当前用户所有的 counters
+    db.collection('todos').get({
+      success: res => {
+        this.setData({
+          todos: res.data
+        })
+        console.log('[数据库] [查询记录] 成功: ', res)
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '查询记录失败'
+        })
+        console.error('[数据库] [查询记录] 失败：', err)
+      }
+    })
   },
   editing(e) {
     // 获取当时点击的是第n个元素
@@ -102,12 +117,13 @@ Page({
     // 设定currentIndex值，改变它的聚会
     const index = e.currentTarget.dataset.index
     // 获取原来数据源
-    let todos = this.data.todos
+    const todos = this.data.todos
     // 修改当前元素的title值
-    todos[index].title = title
+    const todo = todos[index]
+    todo.title = title
+    this.onUpdate(todo)
     // 保存数据源
     this.setData({
-      todos: todos,
       currentIndex: -1
     })
   },

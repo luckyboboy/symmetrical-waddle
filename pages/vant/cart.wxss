@@ -39,8 +39,3 @@ view.van-checkbox__label {
   flex-direction: column;
   justify-content: center;
 }
-
-/* 商品卡片 */
-/* view.van-card {
-  padding-left: 0;
-} */

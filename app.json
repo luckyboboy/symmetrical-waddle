@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/todo/index",
     "pages/index",
+    "pages/todo/index",
     "pages/npm/index",
     "pages/number/number",
     "pages/ocr/index/index",

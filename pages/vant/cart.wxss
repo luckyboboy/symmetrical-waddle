@@ -9,3 +9,16 @@
   text-align: center;
   background-color: #f44;
 }
+
+/* 购物车列表 */
+.container {
+  margin-bottom: 50px;
+}
+
+/* 删除按钮 */
+.delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}

@@ -29,6 +29,10 @@
     "myPlugin": {
       "version": "1.1.1",
       "provider": "wx5dd91767730ed427"
+    },
+    "sdkPlugin": {
+      "version": "3.3.0",
+      "provider": "wxc6b86e382a1e3294"
     }
   },
   "window": {

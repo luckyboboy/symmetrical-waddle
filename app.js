@@ -1,6 +1,14 @@
 // 初始化AV
 App({
   onLaunch: function () {
+    wx.BaaS = requirePlugin('sdkPlugin')
+    //让插件帮助完成登录、支付等功能
+    wx.BaaS.wxExtend(wx.login,
+     wx.getUserInfo,
+     wx.requestPayment)
+
+    wx.BaaS.init('3cb91e0f0c23bad6f3a2')
+    wx.BaaS.auth.loginWithWechat() // 静默登录
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {

@@ -14,6 +14,10 @@ Page({
         url: './todo/index',
       },
       {
+        title: 'VantUI购物车',
+        url: './todo/index',
+      },
+      {
         title: '外汇牌价',
         url: './exchange/list/list',
       },
@@ -46,7 +50,7 @@ Page({
         url: './chat/index',
       },
       {
-        title: '购物车',
+        title: '手工写的购物车',
         url: './cart/index',
       },
       {

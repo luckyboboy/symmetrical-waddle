@@ -15,7 +15,7 @@ Page({
       },
       {
         title: 'TODO微信云开发',
-        url: './todo-cloud/index',
+        url: './todo-zx/index',
       },
       {
         title: 'TODO知晓云开发',

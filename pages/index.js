@@ -30,6 +30,10 @@ Page({
         url: './ps/index',
       },
       {
+        title: 'PS抠图',
+        url: './ps-cloud/index',
+      },
+      {
         title: '外汇牌价',
         url: './exchange/list/list',
       },

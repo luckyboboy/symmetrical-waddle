@@ -26,8 +26,10 @@
 	"libVersion": "2.9.4",
 	"appid": "wxa4efe9d27200be7f",
 	"projectname": "Mina%E7%BB%84%E4%BB%B6%E5%BA%93",
+	"cloudfunctionRoot": "functions/",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -60,9 +62,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "ps",
-					"pathName": "pages/ps/index",
+					"id": 1,
+					"name": "pages/ps-cloud/index",
+					"pathName": "pages/ps-cloud/index",
 					"query": "",
 					"scene": null
 				},

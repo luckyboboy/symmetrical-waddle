@@ -36,16 +36,17 @@ Page({
     this.setData({
       currentIndex: index
     })
+    // 进入focus
   },
   edit (e) {
     // 获取input组件上的取值
     const title = e.detail.value
     const index = e.currentTarget.dataset.index
     let todos = this.data.todos
-    debugger
     todos[index].title = title
     this.setData({
-      todos: todos
+      todos: todos,
+      currentIndex: -1
     })
   }
 })

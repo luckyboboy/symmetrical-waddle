@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/vant/cart",
     "pages/index",
+    "pages/vant/cart",
     "pages/plugin/index/index",
     "pages/todo/index",
     "pages/npm/index",

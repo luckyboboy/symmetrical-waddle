@@ -12,6 +12,6 @@
     </van-swipe-cell>
   </van-checkbox-group>
 </view>
-<van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onClickButton">
+<van-submit-bar price="{{ 989900 }}" button-text="提交订单" bind:submit="onClickButton">
   <van-checkbox class="all" value="{{ checked }}" bind:change="toggleAllChange">全选</van-checkbox>
 </van-submit-bar>

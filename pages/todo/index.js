@@ -35,14 +35,14 @@ Page({
       todos: todos
     })
   },
-  delete (e) {
-    const index = e.currentTarget.dataset.index
-    let todos = this.data.todos
-    todos.splice(index, 1)
-    this.setData({
-      todos: todos
-    })
-  },
+  // delete (e) {
+  //   const index = e.currentTarget.dataset.index
+  //   let todos = this.data.todos
+  //   todos.splice(index, 1)
+  //   this.setData({
+  //     todos: todos
+  //   })
+  // },
   editing (e) {
     const index = e.currentTarget.dataset.index
     this.setData({
@@ -69,22 +69,34 @@ Page({
   },
   // 批量删除
   deleteAll () {
-    // 从后往前遍历
     const checkIndices = this.data.checkIndices
-    let todos = this.data.todos
-    // debugger
-    for (let i = checkIndices.length - 1; i >= 0; i--) {
+    if (Array.isArray(checkIndices) && checkIndices.length > 0) {
+      wx.showModal({
+        title: '确定删除吗？',
+        success: ({confirm}) => {
+          if (confirm) {
+            // 从后往前遍历
+            let todos = this.data.todos
+            // debugger
+            for (let i = checkIndices.length - 1; i >= 0; i--) {
+            }
+            checkIndices.sort((a, b) => {
+              return a - b
+            }).reverse()
+            checkIndices.forEach(item => {
+              todos.splice(item, 1)
+              
+            })
+            // debugger
+            this.setData({
+              todos: todos
+            })
+            wx.showToast({
+              title: '删除成功'
+            })
+          }
+        }
+      })
     }
-    checkIndices.sort((a, b) => {
-      return a - b
-    }).reverse()
-    checkIndices.forEach(item => {
-      todos.splice(item, 1)
-      
-    })
-    // debugger
-    this.setData({
-      todos: todos
-    })
-  }
+    }
 })

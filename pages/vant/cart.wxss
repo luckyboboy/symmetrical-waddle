@@ -22,3 +22,25 @@
   justify-content: center;
   height: 100%;
 }
+
+/* 复选框icon样式 */
+.custom-class {
+  margin-left: 10px;
+}
+
+/* 复选框label样式 */
+view.van-checkbox__label {
+  margin-left: 0;
+}
+
+/* 覆盖复选框包装容器样式 */
+.van-checkbox__icon-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 商品卡片 */
+/* view.van-card {
+  padding-left: 0;
+} */

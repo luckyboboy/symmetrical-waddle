@@ -1,15 +1,15 @@
 <view class="container">
   <van-checkbox-group value="{{ result }}" bind:change="checkboxGroupChange">
-    <van-checkbox name="{{item._id}}" wx:for="{{carts}}" class="carts-container" wx:key="index">
-      <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+    <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}" wx:for="{{carts}}" wx:key="index">
+      <van-checkbox custom-class="custom-class" name="{{item._id}}">
         <van-card num="{{item.quantity}}" price="{{item.goods.price}}" title="{{item.goods.title}}" thumb="{{item.goods.thumb[0].url}}">
           <view slot="bottom">
             <van-stepper value="{{ 1 }}" bind:change="onChange" />
           </view>
         </van-card>
-        <view slot="right" class="delete">删除</view>
-      </van-swipe-cell>
-    </van-checkbox>
+      </van-checkbox>
+      <view slot="right" class="delete">删除</view>
+    </van-swipe-cell>
   </van-checkbox-group>
 </view>
 <van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onClickButton">

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/todo/index",
     "pages/index",
     "pages/npm/index",
     "pages/number/number",

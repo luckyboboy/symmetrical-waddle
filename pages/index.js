@@ -22,6 +22,10 @@ Page({
         url: './todo/index',
       },
       {
+        title: 'PS抠图',
+        url: './ps/index',
+      },
+      {
         title: '外汇牌价',
         url: './exchange/list/list',
       },

@@ -7,20 +7,6 @@ Page({
     // this.mock()
     this.onQuery()
   },
-  // 模拟长列表数据源
-  mock() {
-    // 生成12行数据，看底部删除按钮是否正常
-    const todos = []
-    for (let index = 0; index < 12; index++) {
-      todos.push({
-        title: index
-      })
-    }
-    // 保存数据源
-    this.setData({
-      todos: todos
-    })
-  },
   add(e) {
     // 获取文本框里的内容
     const title = e.detail.value
@@ -80,6 +66,27 @@ Page({
         },
         fail: err => {
           icon: 'none', console.error('[数据库] [更新记录] 失败：', err)
+        }
+      })
+  },
+  // 删除
+  onRemove(todo) {
+    const db = wx.cloud.database()
+    db.collection('todos')
+      .doc(todo._id)
+      .remove({
+        success: res => {
+          wx.showToast({
+            title: '删除成功'
+          })
+          this.onQuery()
+        },
+        fail: err => {
+          wx.showToast({
+            icon: 'none',
+            title: '删除失败'
+          })
+          console.error('[数据库] [删除记录] 失败：', err)
         }
       })
   },
@@ -157,11 +164,10 @@ Page({
               .reverse()
             // 逆序后就可以逐一删除元素
             checkIndices.forEach(item => {
-              todos.splice(item, 1)
+              this.onRemove(this.data.todos[item])
             })
             // 保存数据源，同时checkIndices将它复位
             this.setData({
-              todos: todos,
               checkIndices: []
             })
             // 给出提示框

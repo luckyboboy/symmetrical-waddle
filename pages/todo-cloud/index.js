@@ -15,6 +15,7 @@ Page({
   onLoad() {
     // 调用模拟数据代码，需要时打开下面的注释
     // this.mock()
+    this.onQuery()
   },
   // 模拟长列表数据源
   mock() {
@@ -73,6 +74,27 @@ Page({
         console.error('[数据库] [新增记录] 失败：', err)
       }
     })
+  },
+  // 查询
+  onQuery: function() {
+    const db = wx.cloud.database()
+    // 查询当前用户所有的 counters
+    db.collection('todos')
+      .get({
+        success: res => {
+          this.setData({
+            todos: res.data
+          })
+          console.log('[数据库] [查询记录] 成功: ', res)
+        },
+        fail: err => {
+          wx.showToast({
+            icon: 'none',
+            title: '查询记录失败'
+          })
+          console.error('[数据库] [查询记录] 失败：', err)
+        }
+      })
   },
   editing(e) {
     // 获取当时点击的是第n个元素

@@ -19,5 +19,13 @@ Page({
     this.setData({
       todos: todos
     })
+  },
+  delete (e) {
+    const index = e.currentTarget.dataset.index
+    let todos = this.data.todos
+    todos.splice(index, 1)
+    this.setData({
+      todos: todos
+    })
   }
 })

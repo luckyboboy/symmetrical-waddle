@@ -1,8 +1,9 @@
 <view class="main">
-  <input type="text" name="title" value="新的一条记录" focus="true" bindconfirm="add" />
-  <view class="list">
-    <view class="item" wx:for="{{todos}}" wx:key="">
+  <input type="text" name="title" value="新的一条记录" placeholder="请输入记录内容" placeholder-class="input-placeholder" focus="true" bindconfirm="add" />
+  <view class="list" wx:for="{{todos}}" wx:key="">
+    <view class="item">
       {{item.title}}
     </view>
+    <view class="delete" bindtap="delete" data-index="{{index}}">X</view>
   </view>
 </view>

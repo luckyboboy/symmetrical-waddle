@@ -1,0 +1,14 @@
+.input-placeholder {
+  color: #999;
+}
+
+input {
+  color: #666;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}

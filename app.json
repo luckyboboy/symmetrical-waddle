@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/radiogroup/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Radio Group",
+    "navigationBarTextStyle":"black"
+  }
+}

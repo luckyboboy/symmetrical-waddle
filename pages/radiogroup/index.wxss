@@ -1,0 +1,19 @@
+.radio-group {
+  background-color: #F8F8F8;
+}
+
+.radio-group radio {
+  display: none;
+}
+
+.green{
+  color: #09BB07;
+}
+
+.bc_green{
+  background-color: #09BB07;
+}
+
+.white {
+  color: white;
+}

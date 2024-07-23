@@ -1,5 +1,6 @@
 .radio-group {
-  background-color: #F8F8F8;
+  background-color: #f2f2f2;
+  display: flex;
 }
 
 .radio-group radio {
@@ -16,4 +17,10 @@
 
 .white {
   color: white;
+}
+
+/* label均匀分布，文字居中 */
+label {
+  text-align: center;
+  flex: 1;
 }

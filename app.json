@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/index",
     "pages/radiogroup/index"
   ],
   "window":{

@@ -1,0 +1,10 @@
+<!-- 弹窗 -->
+<view class="modal {{fade}}" bindtap="hide" wx:if="{{visual}}">
+    <view class="container {{animate}}" catchtap="preventDefault">
+        <!-- 关闭按钮 -->
+        <view bindtap="hide" class="close">×</view>
+        <!-- 主体 -->
+        <view class="caption">提示</view>
+        <view class="content">这里是正文</view>
+    </view>
+</view>

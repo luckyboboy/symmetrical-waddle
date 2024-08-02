@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/alert/index",
     "pages/index",
     "pages/radiogroup/index"
   ],

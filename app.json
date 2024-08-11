@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/alert/index",
     "pages/index",
+    "pages/alert/index",
     "pages/radiogroup/index"
   ],
   "window":{

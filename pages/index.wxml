@@ -1,7 +1,7 @@
 <view class="page">
     <view class="page__bd">
 
-        <view class="weui-cells__title">带跳转的列表项</view>
+        <view class="weui-cells__title">例子</view>
         <view class="weui-cells weui-cells_after-title">
             <navigator url="./radiogroup/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">Radio Group</view>

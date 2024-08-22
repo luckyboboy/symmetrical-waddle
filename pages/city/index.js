@@ -1,37 +1,137 @@
 Page({
 	data: {
-		visual: false,
-		animate: '',
-		fade: '',
+		cityArray: {
+			"A": [{
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				}, {
+					name: '安阳',
+					shortname: 'anyang'
+				},
+				{
+					name: '鞍山',
+					shortname: 'anshan'
+				},
+				{
+					name: '阿勒泰',
+					shortname: 'aletai'
+				},
+			],
+			"B": [{
+				name: '北京',
+				shortname: 'beijing'
+			}]
+		},
+		targetLetter: ''
 	},
-	onLoad: function () {
-    setTimeout(() => {
-      this.show();
-    }, 1000)
+	onLoad() {
+		this.generateLetters()
 	},
-	hide: function () {
-		// 隐藏modal弹窗
+	generateLetters() {
 		this.setData({
-			animate: 'bounceOut',
-			fade: 'fadeOut',
-			isEditing: false,
-		});
-		// 动画结束后应该隐藏之，防止隔空被点击
-		setTimeout(()=> {
-			this.setData({
-				visual: false,
-			});
-		}, 750);
+			letters: Object.keys(this.data.cityArray)
+		})
+		console.log(this.data.letters)
 	},
-	show: function () {
-		// 显示modal弹窗
+	toView() {
 		this.setData({
-			visual: true,
-			animate: 'bounceIn',
-			fade: 'fadeIn',
-		});
-	},
-	preventDefault: function () {
-		// 什么都不做，只为阻止父元素点击hide事件
-	},
+			targetLetter: "B"
+		})
+	}
 })

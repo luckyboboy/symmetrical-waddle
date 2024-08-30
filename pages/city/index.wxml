@@ -1,10 +1,25 @@
 <!-- 弹窗 -->
-<button bindtap="toView">toView</button>
-<scroll-view scroll-y style="height: 200px;" scroll-with-animation="true" scroll-into-view="{{targetLetter}}">
+<!-- <button bindtap="toView">toView</button> -->
+<scroll-view scroll-y style="height: 600px;" scroll-with-animation="true" scroll-into-view="{{targetLetter}}">
+    <!-- 当前城市 -->
+    <view class="section-header dark">当前城市</view>
+    <view class="section-body">
+        <view class="city">{{currentCity}}</view>
+    </view>
+    <!-- 全部城市 -->
+    <view class="section-header">全部城市</view>
+    <view class="section-body">
+        <!-- grid -->
+        <view wx:for="{{letters}}">
+            {{item}}
+        </view>
+    </view>
     <view wx:for="{{letters}}" wx:key="" id="{{item}}">
         <view class="section-header">{{item}}</view>
         <view class="section-body">
-            <view wx:for="{{cityArray[item]}}" wx:for-item="city" wx:key="">{{city.name}}</view>
+            <view class="city" wx:for="{{cityArray[item]}}" wx:for-item="city" wx:key="">
+                {{city.name}}
+            </view>
         </view>
     </view>
 </scroll-view>

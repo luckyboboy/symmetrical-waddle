@@ -116,9 +116,24 @@ Page({
 			"B": [{
 				name: '北京',
 				shortname: 'beijing'
-			}]
+			}],
+			"C": [],
+			"D": [],
+			"E": [],
+			"F": [],
+			"G": [],
+			"H": [],
+			"I": [],
+			"J": [],
+			"K": [],
+			"L": [],
+			"M": [],
+			"N": [],
+			"O": [],
+			"P": [],
 		},
-		targetLetter: ''
+		targetLetter: '',
+		currentCity: '瑞安'
 	},
 	onLoad() {
 		this.generateLetters()

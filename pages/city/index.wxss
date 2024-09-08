@@ -31,7 +31,25 @@ page {
   color: #0781DC;
 }
 
+/* 列表中每个城市项 */
 .city {
   margin: 10px 20px;
   line-height: 2;
+}
+
+/* 筛选中的字母 */
+.letter-container {
+  overflow: hidden;
+}
+
+.letter {
+  width: 20%;
+  float: left;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.clear {
+  
+  clear: both;
 }

@@ -131,6 +131,9 @@ Page({
 			"N": [],
 			"O": [],
 			"P": [],
+			"Q": [],
+			"R": [],
+			"T": [],
 		},
 		targetLetter: '',
 		currentCity: '瑞安'
@@ -144,9 +147,10 @@ Page({
 		})
 		console.log(this.data.letters)
 	},
-	toView() {
+	scrollToView(e) {
+		let letter = e.currentTarget.dataset.letter;
 		this.setData({
-			targetLetter: "B"
+			targetLetter: letter
 		})
 	}
 })

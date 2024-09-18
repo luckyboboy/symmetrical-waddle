@@ -148,9 +148,15 @@ Page({
 		console.log(this.data.letters)
 	},
 	scrollToView(e) {
-		let letter = e.currentTarget.dataset.letter;
+		let letter = e.currentTarget.dataset.letter
 		this.setData({
 			targetLetter: letter
+		})
+	},
+	selectCity(e) {
+		let cityName = e.currentTarget.dataset.cityName
+		this.setData({
+			currentCity: cityName
 		})
 	}
 })

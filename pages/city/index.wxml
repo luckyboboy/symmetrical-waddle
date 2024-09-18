@@ -10,14 +10,14 @@
     <view class="section-header">全部城市</view>
     <view class="section-body letter-container">
         <!-- grid -->
-        <view wx:for="{{letters}}" class="letter" bindtap="scrollToView" data-letter="{{item}}">
+        <view wx:for="{{letters}}" class="letter" bindtap="scrollToView" data-letter="{{item}}" wx:key="">
             {{item}}
         </view>
     </view>
     <view wx:for="{{letters}}" wx:key="" id="{{item}}">
         <view class="section-header">{{item}}</view>
         <view class="section-body">
-            <view class="city" wx:for="{{cityArray[item]}}" wx:for-item="city" wx:key="">
+            <view class="city" wx:for="{{cityArray[item]}}" wx:for-item="city" wx:key="" bindtap="selectCity" data-city-name="{{city.name}}">
                 {{city.name}}
             </view>
         </view>

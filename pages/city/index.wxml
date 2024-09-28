@@ -17,7 +17,7 @@
     <view wx:for="{{letters}}" wx:key="" id="{{item}}">
         <view class="section-header">{{item}}</view>
         <view class="section-body">
-            <view class="city" wx:for="{{cityArray[item]}}" wx:for-item="city" wx:key="" bindtap="selectCity" data-city-name="{{city.name}}">
+            <view class="city" wx:for="{{cityArray[item]}}" wx:for-item="city" wx:key="" bindtap="selectCity" data-city-name="{{city.name}}" hover-class="gray-bg">
                 {{city.name}}
             </view>
         </view>

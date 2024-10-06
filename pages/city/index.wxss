@@ -19,6 +19,7 @@ page {
   background: white;
   margin: 5px;
   padding: 5px;
+  overflow: hidden;
 }
 
 /* 主体黑色 */
@@ -39,11 +40,6 @@ page {
 }
 
 /* 筛选中的字母 */
-.letter-container {
-  overflow: hidden;
-}
-
-/* 字母项 */
 .letter {
   width: 20%;
   float: left;
@@ -54,4 +50,22 @@ page {
 /* 点击城市高亮 */
 .gray-bg {
   background: #eee;
+}
+
+/* 热门城市 */
+.recommend {
+  width: 25%;
+  float: left;
+  padding: 10px 0;
+}
+
+.recommend image {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.recommend view {
+  font-size: 12px;
+  text-align: center;
 }

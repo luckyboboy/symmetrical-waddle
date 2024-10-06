@@ -1,6 +1,6 @@
 Page({
 	data: {
-		cityArray: {
+		allCities: {
 			"A": [{
 					name: '安阳',
 					shortname: 'anyang'
@@ -135,6 +135,52 @@ Page({
 			"R": [],
 			"T": [],
 		},
+		recommendCities: [
+			{
+				name: '北京',
+				shortname: 'beijing'
+			},
+			{
+				name: '上海',
+				shortname: 'shanghai'
+			},
+			{
+				name: '广州',
+				shortname: 'guangzhou'
+			},
+			{
+				name: '深圳',
+				shortname: 'shenzhen'
+			},
+			{
+				name: '天津',
+				shortname: 'beijing'
+			},
+			{
+				name: '成都',
+				shortname: 'chengdu'
+			},
+			{
+				name: '重庆',
+				shortname: 'chongqing'
+			},
+			{
+				name: '佛山',
+				shortname: 'foshan'
+			},
+			{
+				name: '青岛',
+				shortname: 'qingdao'
+			},
+			{
+				name: '东莞',
+				shortname: 'dongguan'
+			},
+			{
+				name: '贵阳',
+				shortname: 'guiyang'
+			}
+		],
 		targetLetter: '',
 		currentCity: '瑞安'
 	},
@@ -143,9 +189,8 @@ Page({
 	},
 	generateLetters() {
 		this.setData({
-			letters: Object.keys(this.data.cityArray)
+			letters: Object.keys(this.data.allCities)
 		})
-		console.log(this.data.letters)
 	},
 	scrollToView(e) {
 		let letter = e.currentTarget.dataset.letter

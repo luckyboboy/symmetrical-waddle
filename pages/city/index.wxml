@@ -6,9 +6,18 @@
     <view class="section-body">
         <view class="city">{{currentCity}}</view>
     </view>
+    <!-- 热门城市 -->
+    <view class="section-header">热门城市</view>
+    <view class="section-body">
+        <!-- grid -->
+        <view wx:for="{{recommendCities}}" class="recommend" data-letter="{{item.name}}" wx:key="" bindtap="selectCity" data-city-name="{{item.name}}">
+            <image src="./images/{{item.shortname}}.png" mode="widthFix"></image>
+            <view>{{item.name}}</view>
+        </view>
+    </view>
     <!-- 全部城市 -->
     <view class="section-header">全部城市</view>
-    <view class="section-body letter-container">
+    <view class="section-body">
         <!-- grid -->
         <view wx:for="{{letters}}" class="letter" bindtap="scrollToView" data-letter="{{item}}" wx:key="">
             {{item}}
@@ -17,7 +26,7 @@
     <view wx:for="{{letters}}" wx:key="" id="{{item}}">
         <view class="section-header">{{item}}</view>
         <view class="section-body">
-            <view class="city" wx:for="{{cityArray[item]}}" wx:for-item="city" wx:key="" bindtap="selectCity" data-city-name="{{city.name}}" hover-class="gray-bg">
+            <view class="city" wx:for="{{allCities[item]}}" wx:for-item="city" wx:key="" bindtap="selectCity" data-city-name="{{city.name}}" hover-class="gray-bg">
                 {{city.name}}
             </view>
         </view>

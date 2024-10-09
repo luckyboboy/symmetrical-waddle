@@ -11,7 +11,7 @@
     <view class="section-body">
         <!-- grid -->
         <view wx:for="{{recommendCities}}" class="recommend" data-letter="{{item.name}}" wx:key="" bindtap="selectCity" data-city-name="{{item.name}}">
-            <image src="./images/{{item.shortname}}.png" mode="widthFix"></image>
+            <image src="./images/{{item.pinyin}}.png" mode="widthFix"></image>
             <view>{{item.name}}</view>
         </view>
     </view>
@@ -19,7 +19,7 @@
     <view class="section-header">全部城市</view>
     <view class="section-body">
         <!-- grid -->
-        <view wx:for="{{letters}}" class="letter" bindtap="scrollToView" data-letter="{{item}}" wx:key="">
+        <view wx:for="{{letters}}" class="letter" bindtap="scrollToView" data-letter="{{item}}" wx:key="" hover-class="gray-bg">
             {{item}}
         </view>
     </view>

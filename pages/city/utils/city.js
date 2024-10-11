@@ -4767,16 +4767,22 @@ let cities = [{
 }]
 
 // 全部城市
-let allCities = {}
+let citiesGroup = {}
 cities.forEach((item, index) => {
   // 取出pinyin字段的第一个字母
   let letter = item.pinyin.substr(0, 1)
   // 当前字母组未包含任何一个元素，则初始化为[]空数组
-  allCities[letter] = allCities[letter] || []
+  citiesGroup[letter] = citiesGroup[letter] || []
   // 出于方便管理，将数据源中的pinyin字段改为小写
   item.pinyin = item.pinyin.toLowerCase()
   // 每个元素塞进相应的字母组中
-  allCities[letter].push(item)
+  citiesGroup[letter].push(item)
+})
+
+// 按字母表排序
+let allCities = {}
+Object.keys(citiesGroup).sort().forEach(letter => {
+  allCities[letter] = citiesGroup[letter]
 })
 
 // 热门城市

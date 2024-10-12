@@ -4766,15 +4766,19 @@ let cities = [{
   "zip": "0315"
 }]
 
+cities.map(item => {
+  // 出于方便管理，将数据源中的pinyin字段改为小写
+  item.pinyin = item.pinyin.toLowerCase()
+  return item
+})
+
 // 全部城市
 let citiesGroup = {}
-cities.forEach((item, index) => {
+cities.forEach(item => {
   // 取出pinyin字段的第一个字母
   let letter = item.pinyin.substr(0, 1)
   // 当前字母组未包含任何一个元素，则初始化为[]空数组
   citiesGroup[letter] = citiesGroup[letter] || []
-  // 出于方便管理，将数据源中的pinyin字段改为小写
-  item.pinyin = item.pinyin.toLowerCase()
   // 每个元素塞进相应的字母组中
   citiesGroup[letter].push(item)
 })
@@ -4786,53 +4790,12 @@ Object.keys(citiesGroup).sort().forEach(letter => {
 })
 
 // 热门城市
-let recommendCities =  [
-  {
-    name: '北京',
-    pinyin: 'beijing'
-  },
-  {
-    name: '上海',
-    pinyin: 'shanghai'
-  },
-  {
-    name: '广州',
-    pinyin: 'guangzhou'
-  },
-  {
-    name: '深圳',
-    pinyin: 'shenzhen'
-  },
-  {
-    name: '天津',
-    pinyin: 'beijing'
-  },
-  {
-    name: '成都',
-    pinyin: 'chengdu'
-  },
-  {
-    name: '重庆',
-    pinyin: 'chongqing'
-  },
-  {
-    name: '佛山',
-    pinyin: 'foshan'
-  },
-  {
-    name: '青岛',
-    pinyin: 'qingdao'
-  },
-  {
-    name: '东莞',
-    pinyin: 'dongguan'
-  },
-  {
-    name: '贵阳',
-    pinyin: 'guiyang'
+let recommendCities = cities.filter(item => {
+  let target = ['北京', '上海', '广州', '深圳', '天津', '成都', '重庆', '佛山', '青岛', '东莞', '贵阳']
+  if (target.indexOf(item.name) >= 0) {
+    return true
   }
-]
-
+})
 module.exports = {
   allCities,
   recommendCities

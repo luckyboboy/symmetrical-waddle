@@ -4776,26 +4776,27 @@ cities.map(item => {
 let citiesGroup = {}
 cities.forEach(item => {
   // 取出pinyin字段的第一个字母
-  let letter = item.pinyin.substr(0, 1)
+  let letter = item.pinyin.substr(0, 1).toUpperCase()
   // 当前字母组未包含任何一个元素，则初始化为[]空数组
   citiesGroup[letter] = citiesGroup[letter] || []
   // 每个元素塞进相应的字母组中
   citiesGroup[letter].push(item)
 })
 
-// 按字母表排序
+// 按字母表排序得出最终适用的全部城市字典
 let allCities = {}
 Object.keys(citiesGroup).sort().forEach(letter => {
   allCities[letter] = citiesGroup[letter]
 })
 
-// 热门城市
+// 筛选出热门城市
 let recommendCities = cities.filter(item => {
   let target = ['北京', '上海', '广州', '深圳', '天津', '成都', '重庆', '佛山', '青岛', '东莞', '贵阳']
   if (target.indexOf(item.name) >= 0) {
     return true
   }
 })
+
 module.exports = {
   allCities,
   recommendCities

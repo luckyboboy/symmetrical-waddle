@@ -60,6 +60,7 @@ page {
 }
 
 .recommend image {
+  display: block;
   width: 80%;
   margin: 0 auto;
   border-radius: 50%;
@@ -68,4 +69,5 @@ page {
 .recommend view {
   font-size: 12px;
   text-align: center;
+  margin-top: 10px;
 }

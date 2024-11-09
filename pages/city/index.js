@@ -1,7 +1,9 @@
+// 引入城市数据源
 let {
 	allCities,
 	recommendCities
 } = require('./utils/city')
+// 引入腾讯地图组件
 let QQMapWX = require('./utils/qqmap-wx-jssdk.min.js');
 
 Page({
@@ -15,21 +17,8 @@ Page({
 	onLoad() {
 		// 生成字母数组
 		this.generateLetters()
-		// 初始化腾讯地图
-		let qqmapsdk = new QQMapWX({
-			key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
-		})
-		// 调用接口
-		qqmapsdk.reverseGeocoder({
-			poi_options: 'policy=2',
-			get_poi: 1,
-			success: (res) => {
-				// 渲染给页面
-				this.setData({
-					geoCity: res.result.address_component.district
-				});    
-			}
-		});
+		// 获取定位城市名
+		this.getLocation()
 	},
 	generateLetters() {
 		// 从Object对象取出
@@ -50,5 +39,22 @@ Page({
 		this.setData({
 			currentCity: cityName
 		})
+	},
+	getLocation() {
+		// 初始化腾讯地图
+		let qqmapsdk = new QQMapWX({
+			key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
+		})
+		// 调用接口
+		qqmapsdk.reverseGeocoder({
+			poi_options: 'policy=2',
+			get_poi: 1,
+			success: (res) => {
+				// 渲染给页面
+				this.setData({
+					geoCity: res.result.address_component.district
+				});    
+			}
+		});
 	}
 })

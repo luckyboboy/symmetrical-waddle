@@ -4,12 +4,12 @@
     <!-- 当前城市 -->
     <view class="section-header dark">当前城市</view>
     <view class="section-body">
-        <view class="city">{{currentCity}}</view>
+        <view class="city blue">{{currentCity}}</view>
     </view>
     <!-- 定位城市 -->
     <view class="section-header">定位城市</view>
     <view class="section-body">
-        <view class="city">{{geoCity}}</view>
+        <view class="city" bindtap="selectCity" data-city-name="{{geoCity}}">{{geoCity}}</view>
     </view>
     <!-- 热门城市 -->
     <view class="section-header">热门城市</view>

@@ -12,7 +12,8 @@ Page({
 		recommendCities: recommendCities, // 热门城市字典
 		targetLetter: '', // 滚动视图所要指定的id
 		currentCity: '瑞安', // 当前城市
-		geoCity: '' // 定位城市
+		geoCity: '', // 定位城市
+		scrollTop: 0 // 滚动条位置，用于控制回到顶部
 	},
 	onLoad() {
 		// 生成字母数组
@@ -37,7 +38,8 @@ Page({
 		// 点击城市事件
 		let cityName = e.currentTarget.dataset.cityName
 		this.setData({
-			currentCity: cityName
+			currentCity: cityName,
+			scrollTop: 0
 		})
 	},
 	getLocation() {

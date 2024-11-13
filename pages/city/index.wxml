@@ -1,6 +1,6 @@
 <!-- 弹窗 -->
 <!-- <button bindtap="toView">toView</button> -->
-<scroll-view scroll-y style="height: 600px;" scroll-with-animation="true" scroll-into-view="{{targetLetter}}">
+<scroll-view scroll-y style="height: 600px;" scroll-with-animation="true" scroll-into-view="{{targetLetter}}" scroll-top="{{scrollTop}}">
     <!-- 当前城市 -->
     <view class="section-header dark">当前城市</view>
     <view class="section-body">

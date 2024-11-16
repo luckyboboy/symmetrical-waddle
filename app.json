@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/city/index",
     "pages/index",
+    "pages/city/index",
     "pages/alert/index",
     "pages/radiogroup/index"
   ],

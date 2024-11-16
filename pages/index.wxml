@@ -11,6 +11,10 @@
                 <view class="weui-cell__bd">弹窗</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
+            <navigator url="./city/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">城市切换</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
         </view>
 
     </view>

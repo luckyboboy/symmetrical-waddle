@@ -13,7 +13,8 @@ Page({
 		targetLetter: '', // 滚动视图所要指定的id
 		currentCity: '瑞安', // 当前城市
 		geoCity: '', // 定位城市
-		scrollTop: 0 // 滚动条位置，用于控制回到顶部
+		scrollTop: 0, // 滚动条位置，用于控制回到顶部
+		scrollHeight: wx.getSystemInfoSync().windowHeight // 滚动视图高度
 	},
 	onLoad() {
 		// 生成字母数组
@@ -55,8 +56,8 @@ Page({
 				// 渲染给页面
 				this.setData({
 					geoCity: res.result.address_component.district
-				});    
+				})
 			}
-		});
+		})
 	}
 })

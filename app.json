@@ -8,7 +8,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Mina前端组件",
+    "navigationBarTitleText": "Mina组件库",
     "navigationBarTextStyle":"black"
   }
 }

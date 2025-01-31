@@ -8,7 +8,9 @@
 			<view class="avatar-container">
 				<image class="avatar" src="{{item.head_img_url}}" />
 			</view>
-			<view class="content">
+			<!-- 画三角箭头 -->
+			<view class="triangle" style="{{item.myself == 1 ? 'right: 140rpx; background: #7ECB4B' : 'left: 140rpx;'}}"></view>
+			<view class="content" style="{{item.myself == 1 ? 'background: #7ECB4B' : ''}}">
 				<image class="picture" wx:if="{{item.msg_type == 'image'}}" src="{{item.content}}" mode="widthFix" bindtap="preview" data-src="{{item.content}}" />
 				<view wx:else="{{item.msg_type == 'text'}}">{{item.content}}</view>
 			</view>

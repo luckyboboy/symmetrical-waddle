@@ -13,7 +13,7 @@ Page({
         myself: 0,
         head_img_url: 'https://wx.qlogo.cn/mmopen/vi_32/njwaSUP5DiabKEr626aBGHEhibiaAEFLqungTIkqq4WibYRBXcWnCdwBDqbibsZBo67O3ic0O56ZLAUicyKg0RwJ08sSg/0',
         'msg_type': 'text',
-        'content': '你好',
+        'content': 'scroll-into-view，默认不带动画，因此加上scroll-with-animation="true"属性，它的默认值是false的',
         create_time: '2018-07-31 14:00:19'
       },
       {
@@ -52,10 +52,19 @@ Page({
       });
       return;
     }
-    // 清空文本
+    var message_list = this.data.message_list;
+    var message = {
+      myself: 1,
+      head_img_url: 'http://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqSucF9v6bKPfUPSTuQjpqmr8jAZEOgsFjFCHc73UIlUAgnI2nz6aFdnkRWAxxy1uZGfC82Yp7fMg/0',
+      'msg_type': 'text',
+      'content': content,
+      create_time: '2018-07-31 21:04:31'
+    }
+    message_list.push(message);
     this.setData({
-      content: ''
-    });
+      message_list: message_list,
+      content: '' // 清空输入框文本
+    })
     this.scrollToBottom();
   },
   pushMessage: function (messasge) {

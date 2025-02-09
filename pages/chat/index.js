@@ -88,12 +88,12 @@ Page({
       count: 9,
       sizeType: ['compressed'],
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-      success: function (res) {
+      success:  res => {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         var tempFilePaths = res.tempFilePaths;
         // console.log(tempFilePaths);
         // 遍历多图
-        tempFilePaths.forEach(function (tempFilePath) {
+        tempFilePaths.forEach( (tempFilePath) => {
           this.upload(tempFilePath, 'image');
         });
       }
@@ -188,30 +188,20 @@ Page({
       msg_type: type,
     };
     console.log(tempFilePath);
-    wx.uploadFile({
-      url: http.HOST + http.sendChat,
-      filePath: tempFilePath,
-      header: {
-        "content-type": "mutipart/form-data"
-      },
-      name: 'file',
-      formData: formData,
-      success: function (res) {
-        // 上传成功
-        var data = JSON.parse(res.data)
-        this.pushMessage(data.data);
-        this.scrollToBottom();
-        console.log(res);
-        // 隐藏上传中提示框
-        wx.hideLoading();
-        // 提示上传成功
-        // wx.showToast({
-        //   title: data.msg
-        // });
-      },
-      fail: function (res) {
-        console.log(res);
-      }
+    var message_list = this.data.message_list;
+    var message = {
+      myself: 1,
+      head_img_url: 'http://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqSucF9v6bKPfUPSTuQjpqmr8jAZEOgsFjFCHc73UIlUAgnI2nz6aFdnkRWAxxy1uZGfC82Yp7fMg/0',
+      'msg_type': type,
+      'content': tempFilePath,
+      create_time: '2018-07-31 17:20:39'
+    };
+    message_list.push(message);
+    this.setData({
+      message_list: message_list
     })
+    setTimeout(() => {
+      wx.hideLoading();
+    }, 500)
   }
 })

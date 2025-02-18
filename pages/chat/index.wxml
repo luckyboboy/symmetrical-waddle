@@ -17,7 +17,7 @@
 		</view>
 	</view>
 </scroll-view>
-<view class="hud-container" wx:if="{{status != state.normal}}" style="top: {{hud_top}}px; left: {{hud_left}}px;">
+<view class="hud-container" wx:if="{{status != state.normal}}">
 	<view class="hud-background"></view>
 	<view class="hud-body">
 		<image src="./images/mic.png" />

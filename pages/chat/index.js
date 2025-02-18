@@ -35,8 +35,6 @@ Page({
       'pressed': 1,
       'cancel': 2
     },
-    hud_top: (wx.getSystemInfoSync().windowHeight - 180) / 2,
-    hud_left: (wx.getSystemInfoSync().windowHeight - 150) / 2,
   },
   onLoad: function () {},
   scrollToBottom: function () {

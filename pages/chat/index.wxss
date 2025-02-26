@@ -94,7 +94,7 @@
 
 /*文本输入或语音录入*/
 .reply .opration-area {
-	width: 85%;
+	flex: 1;
 	padding: 8px;
 }
 

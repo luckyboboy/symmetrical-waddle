@@ -32,6 +32,3 @@
 	</view>
 	<image src="./images/image.png" class="choose-image" bindtap="chooseImage" />
 </view>
-<view class="reply" wx:if="{{verify_type == -1}}">
-	<view class="tips">未认证的公众号不支持回复消息</view>
-</view>

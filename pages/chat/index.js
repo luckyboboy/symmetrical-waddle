@@ -36,12 +36,6 @@ Page({
       'cancel': 2
     },
   },
-  onLoad: function () {},
-  scrollToBottom: function () {
-    this.setData({
-      toView: 'row_' + (this.data.message_list.length - 1)
-    });
-  },
   reply: function (e) {
     var content = e.detail.value;
     if (content == '') {
@@ -64,21 +58,6 @@ Page({
       content: '' // 清空输入框文本
     })
     this.scrollToBottom();
-  },
-  pushMessage: function (messasge) {
-    // 聊天记录添加一行刚刚发送的内容本身，更佳的方案是由服务端返回
-    var message_list = this.data.message_list;
-    message_list.push(messasge);
-    this.setData({
-      message_list: message_list
-    });
-  },
-  loadMore: function () {
-    var page_index = this.data.page_index;
-    this.setData({
-      page_index: ++page_index
-    });
-    this.getMessages(this.data.mpid, this.data.fans_id, this.data.page_index);
   },
   chooseImage: function () {
     // 选择图片供上传

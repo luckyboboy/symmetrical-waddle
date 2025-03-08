@@ -35,6 +35,7 @@ Page({
       'pressed': 1,
       'cancel': 2
     },
+    toView: ''
   },
   reply: function (e) {
     var content = e.detail.value;
@@ -164,7 +165,7 @@ Page({
       fans_id: this.data.to_uid,
       msg_type: type,
     };
-    console.log(tempFilePath);
+    // console.log(tempFilePath);
     var message_list = this.data.message_list;
     var message = {
       myself: 1,
@@ -180,5 +181,10 @@ Page({
     setTimeout(() => {
       wx.hideLoading();
     }, 500)
-  }
+  },
+  scrollToBottom: function () {
+    this.setData({
+      toView: 'row_' + (this.data.message_list.length - 1)
+    });
+  },
 })

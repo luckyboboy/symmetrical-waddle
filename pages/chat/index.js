@@ -178,6 +178,7 @@ Page({
     this.setData({
       message_list: message_list
     })
+    this.scrollToBottom()
     setTimeout(() => {
       wx.hideLoading();
     }, 500)

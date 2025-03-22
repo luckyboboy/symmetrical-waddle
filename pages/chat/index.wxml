@@ -1,4 +1,4 @@
-<scroll-view bindscrolltoupper="loadMore" upper-threshold="100" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" scroll-y="true" focus="{{mode}}" enable-back-to-top="true" style="height: {{scroll_height}}px;" class="message-list">
+<scroll-view upper-threshold="100" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" scroll-y="true" focus="{{mode}}" enable-back-to-top="true" style="height: {{scroll_height}}px;" class="message-list">
 	<!-- 每一行 -->
 	<view class="row" wx:for="{{message_list}}" wx:key="" id="row_{{index}}">
 		<!-- 日期 -->

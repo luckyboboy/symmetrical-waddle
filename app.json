@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/cart/index",
     "pages/index",
     "pages/chat/index",
     "pages/city/index",

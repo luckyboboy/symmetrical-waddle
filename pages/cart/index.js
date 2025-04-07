@@ -100,10 +100,11 @@ Page({
 			};
 			cartObjects.push(cart);
 		});
-
-		wx.navigateTo({
-			url: '../../order/checkout/checkout?quantity=' + that.data.quantity + '&amount=' + that.data.amount +'&express_fee=' + that.data.express_fee + '&carts=' + JSON.stringify(cartObjects)
-		});
+		wx.showModal({
+			title: '商品清单',
+			content: JSON.stringify(cartObjects),
+			showCancel: false
+		})
 	},
 	add: function (e) {
 		// 所点商品id

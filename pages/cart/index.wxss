@@ -380,3 +380,23 @@
 .show {
 	display: block;
 }
+
+/*每行*/
+.item {
+	display: flex;
+	flex-direction: row;
+	line-height: 40px;
+	color: #666;
+	border-bottom: 1px solid #eee;
+	margin-left: 10px;
+	font-size: 14px;
+	/*relative供arrow参照用*/
+	position: relative;
+	/*justify-content: space-between;*/
+}
+
+/*商品名称*/
+.title {
+	margin-left: 10px;
+	flex: 8;
+}

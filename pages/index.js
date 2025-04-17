@@ -2,7 +2,7 @@ Page({
   data: {
     items: [
       {
-        title: 'Radio Group',
+        title: '分段组件',
         url: './radiogroup/index',
       },
       {
@@ -16,6 +16,10 @@ Page({
       {
         title: '聊天界面',
         url: './chat/index',
+      },
+      {
+        title: '购物车',
+        url: './cart/index',
       }
     ]
   }

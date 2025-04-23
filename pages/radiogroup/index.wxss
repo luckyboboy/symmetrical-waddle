@@ -1,6 +1,10 @@
 .radio-group {
   background-color: #f2f2f2;
   display: flex;
+  margin: 5px;
+  border: 1px solid #09BB07;
+  border-radius: 5px;
+  /* border-right: 0; */
 }
 
 .radio-group radio {
@@ -22,5 +26,11 @@
 /* label均匀分布，文字居中 */
 label {
   text-align: center;
+  padding: 3px 0;
   flex: 1;
+  border-right: 1px solid #09BB07;
+}
+
+label:last-child {
+  border-right: 0;
 }

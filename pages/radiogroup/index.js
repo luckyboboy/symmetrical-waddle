@@ -7,7 +7,7 @@ Page({
       {value: 'BRA', title: '巴西'},
       {value: 'ENG', title: '英国'},
     ],
-    country: ''
+    country: 'CHN'
   },
   radioChange: function(e) {
     this.setData({

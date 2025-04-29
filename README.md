@@ -8,7 +8,7 @@
 
 ### 1.自定义radio-group风格
 
-![image.png](https://upload-images.jianshu.io/upload_images/2599324-42bca4b25e569ac8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![radiogroup.gif](https://upload-images.jianshu.io/upload_images/2599324-fa717f6342996880.gif?imageMogr2/auto-orient/strip)
 
 
 ### 2.自定义Alert弹窗
@@ -21,7 +21,11 @@
 
 ### 4.聊天会话窗口
 
-![聊天会话](https://upload-images.jianshu.io/upload_images/2599324-228d5ddd201c08fb.gif?imageMogr2/auto-orient/strip)
+![chat.gif](https://upload-images.jianshu.io/upload_images/2599324-228d5ddd201c08fb.gif?imageMogr2/auto-orient/strip)
+
+### 5.仿饿了么购物车
+
+![cart.gif](https://upload-images.jianshu.io/upload_images/2599324-ac8cc8be34c0bb9d.gif?imageMogr2/auto-orient/strip)
 
 ### 更多请关注
 

@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/tab/index",
     "pages/index",
     "pages/cart/index",
     "pages/chat/index",

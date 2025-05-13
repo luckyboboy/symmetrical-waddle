@@ -20,6 +20,10 @@ Page({
       {
         title: '购物车',
         url: './cart/index',
+      },
+      {
+        title: '底部Tab',
+        url: './tab/index',
       }
     ]
   }

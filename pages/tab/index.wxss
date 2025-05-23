@@ -13,4 +13,6 @@ page,
 
 .weui-navbar {
   background: white;
+  bottom: 0;
+  top: initial;
 }

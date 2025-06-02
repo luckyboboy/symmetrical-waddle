@@ -15,4 +15,6 @@ page,
   background: white;
   bottom: 0;
   top: initial;
+  border-top: 1rpx solid #ccc;
+  border-bottom: 0;
 }

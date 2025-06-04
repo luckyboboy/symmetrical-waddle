@@ -18,3 +18,23 @@ page,
   border-top: 1rpx solid #ccc;
   border-bottom: 0;
 }
+
+.weui-navbar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.weui-navbar__item image {
+  width: 24px;
+  height: 24px;
+}
+
+.weui-navbar__title {
+  font-size: 12px;
+}
+
+.weui-navbar__slider {
+  height: 2px;
+}

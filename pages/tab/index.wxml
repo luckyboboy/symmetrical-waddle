@@ -2,12 +2,13 @@
     <view class="page__bd">
         <view class="weui-tab">
             <view class="weui-navbar">
-                <block wx:for="{{tabs}}" wx:key="*this">
-                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-                        <view class="weui-navbar__title">{{item}}</view>
+                <block wx:for="{{tabBar.list}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item" bindtap="tabClick">
+                        <image src="{{activeIndex == index ? item.selectedIconPath : item.iconPath}}" />
+                        <view class="weui-navbar__title" style="color: {{activeIndex == index ? tabBar.selectedColor : tabBar.normalColor}}">{{item.text}}</view>
                     </view>
                 </block>
-                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px); background-color: {{tabBar.selectedColor}}"></view>
             </view>
             <view class="weui-tab__panel">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">选项一的内容</view>

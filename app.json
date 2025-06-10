@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/tab/index",
     "pages/index",
+    "pages/tab/index",
     "pages/cart/index",
     "pages/chat/index",
     "pages/city/index",

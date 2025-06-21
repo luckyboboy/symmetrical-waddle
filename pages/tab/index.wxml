@@ -3,7 +3,7 @@
         <view class="weui-tab">
             <view class="weui-navbar">
                 <block wx:for="{{tabBar.list}}" wx:key="*this">
-                    <view id="{{index}}" class="weui-navbar__item" bindtap="tabClick">
+                    <view id="{{index}}" class="weui-navbar__item" bindtap="tabClick" style="background-color: {{activeIndex == index ? tabBar.selectedBackgroundColor : tabBar.backgroundColor}}">
                         <image src="{{activeIndex == index ? item.selectedIconPath : item.iconPath}}" />
                         <view class="weui-navbar__title" style="color: {{activeIndex == index ? tabBar.selectedColor : tabBar.normalColor}}">{{item.text}}</view>
                     </view>

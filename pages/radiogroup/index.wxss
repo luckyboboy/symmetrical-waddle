@@ -1,7 +1,11 @@
+page {
+  background: #F8F8F8;
+}
+
 .radio-group {
-  background-color: #f2f2f2;
+  background-color:white;
   display: flex;
-  margin: 5px;
+  margin: 25px;
   border: 1px solid #09BB07;
   border-radius: 5px;
   /* border-right: 0; */

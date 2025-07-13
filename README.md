@@ -27,6 +27,11 @@
 
 ![cart.gif](https://upload-images.jianshu.io/upload_images/2599324-ac8cc8be34c0bb9d.gif?imageMogr2/auto-orient/strip)
 
+### 6.自定义tab栏
+
+![tab.gif](https://upload-images.jianshu.io/upload_images/2599324-486fe0e71aeec8c4.gif?imageMogr2/auto-orient/strip)
+
+
 ### 更多请关注
 
 ![分答提问](https://upload-images.jianshu.io/upload_images/2599324-2ad8c4ab82f1fae9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

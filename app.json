@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index",
+    "pages/timeline/index",
     "pages/tab/index",
     "pages/cart/index",
     "pages/chat/index",

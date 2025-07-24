@@ -24,6 +24,10 @@ Page({
       {
         title: '底部Tab',
         url: './tab/index',
+      },
+      {
+        title: '时间轴',
+        url: './timeline/index',
       }
     ]
   }

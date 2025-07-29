@@ -31,6 +31,10 @@
 
 ![tab.gif](https://upload-images.jianshu.io/upload_images/2599324-486fe0e71aeec8c4.gif?imageMogr2/auto-orient/strip)
 
+### 7.时间轴
+
+![timeline.gif](https://upload-images.jianshu.io/upload_images/2599324-7f9bbf99c1c783a0.gif?imageMogr2/auto-orient/strip)
+
 
 ### 更多请关注
 

@@ -1,3 +1,11 @@
+/**
+ *
+ * 在线体验，微信-发现-小程序-Mina组件库
+ * 关注订阅号【黄秀杰】，第一时间收到教程推送
+ *
+ * @link http://www.it577.net
+ * @author 黄秀杰
+ */
 const utils = require('./utils/utils')
 
 Page({

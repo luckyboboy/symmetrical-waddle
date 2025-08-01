@@ -1,4 +1,4 @@
-<ad unit-id="adunit-e406b44681194b7e"></ad>
+<!-- <ad unit-id="adunit-e406b44681194b7e"></ad> -->
 <scroll-view scroll-y style="height: {{scrollHeight}}px;" scroll-with-animation="true" scroll-into-view="{{targetLetter}}" scroll-top="{{scrollTop}}">
     <!-- 当前城市 -->
     <view class="section-header dark">当前城市</view>

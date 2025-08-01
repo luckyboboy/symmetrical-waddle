@@ -1,11 +1,11 @@
 {
   "pages":[
+    "pages/city/index",
     "pages/index",
     "pages/timeline/index",
     "pages/tab/index",
     "pages/cart/index",
     "pages/chat/index",
-    "pages/city/index",
     "pages/alert/index",
     "pages/radiogroup/index"
   ],

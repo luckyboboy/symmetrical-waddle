@@ -1,8 +1,23 @@
 /* 全局背景 */
 page {
   background: #F1F1F7;
-  padding: 8px;
+  padding: 0 8px;
   box-sizing: border-box;
+}
+
+/* 主体黑色 */
+.dark {
+  color: #171717;
+}
+
+/* 高亮蓝色 */
+.blue {
+  color: #0781DC;
+}
+
+/* 点击城市高亮 */
+.gray-bg {
+  background: #eee;
 }
 
 /* 组头 */
@@ -22,16 +37,6 @@ page {
   overflow: hidden;
 }
 
-/* 主体黑色 */
-.dark {
-  color: #171717;
-}
-
-/* 高亮蓝色 */
-.blue {
-  color: #0781DC;
-}
-
 /* 列表中每个城市项 */
 .city {
   margin: 5px 10px;
@@ -45,11 +50,6 @@ page {
   float: left;
   text-align: center;
   padding: 10px 0;
-}
-
-/* 点击城市高亮 */
-.gray-bg {
-  background: #eee;
 }
 
 /* 热门城市 */

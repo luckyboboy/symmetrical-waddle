@@ -1,23 +1,8 @@
 /* 全局背景 */
 page {
   background: #F1F1F7;
-  padding: 0 8px;
+  padding: 8px;
   box-sizing: border-box;
-}
-
-/* 主体黑色 */
-.dark {
-  color: #171717;
-}
-
-/* 高亮蓝色 */
-.blue {
-  color: #0781DC;
-}
-
-/* 点击城市高亮 */
-.gray-bg {
-  background: #eee;
 }
 
 /* 组头 */
@@ -25,6 +10,11 @@ page {
   color: #ACACAC;
   font-size: 12px;
   margin: 14px;
+}
+
+/* 当前城市组标题高亮 */
+.current-city-header {
+  color: #171717;
 }
 
 /* 组体 */
@@ -37,37 +27,47 @@ page {
   overflow: hidden;
 }
 
-/* 列表中每个城市项 */
-.city {
-  margin: 5px 10px;
-  line-height: 2;
-  padding: 5px 10px;
-}
-
-/* 筛选中的字母 */
-.letter {
-  width: 20%;
-  float: left;
-  text-align: center;
-  padding: 10px 0;
-}
-
 /* 热门城市 */
-.recommend {
+.section-body .recommend {
   width: 25%;
   float: left;
   padding: 10px 0;
 }
 
-.recommend image {
+.section-body .recommend image {
   display: block;
   width: 80%;
   margin: 0 auto;
   border-radius: 50%;
 }
 
-.recommend view {
+.section-body .recommend view {
   font-size: 12px;
   text-align: center;
   margin-top: 10px;
+}
+
+/* 列表中每个城市项 */
+.section-body .city-name {
+  margin: 5px 10px;
+  line-height: 2;
+  padding: 5px 10px;
+}
+
+/* 当前城市名高亮 */
+.section-body .current-city-name {
+  color: #0781DC;
+}
+
+/* 点击城市高亮 */
+.section-body .city-name-hover {
+  background: #eee;
+}
+
+/* 筛选中的字母 */
+.section-body .letter {
+  width: 20%;
+  float: left;
+  text-align: center;
+  padding: 10px 0;
 }

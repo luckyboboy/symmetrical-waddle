@@ -16,7 +16,7 @@
         <!-- grid -->
         <view wx:for="{{recommendCities}}" class="recommend" data-letter="{{item.name}}" wx:key="" bindtap="selectCity" data-city-name="{{item.name}}">
             <image src="./images/{{item.pinyin}}.png" mode="widthFix"></image>
-            <view>{{item.name}}</view>
+            <text>{{item.name}}</text>
         </view>
     </view>
     <!-- 全部城市 -->

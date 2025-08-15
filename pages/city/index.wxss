@@ -1,13 +1,13 @@
 /* 全局背景 */
 page {
-  background: #F1F1F7;
+  background: #f1f1f1;
   padding: 8px;
   box-sizing: border-box;
 }
 
 /* 组头 */
 .section-header {
-  color: #ACACAC;
+  color: #acacac;
   font-size: 12px;
   margin: 14px;
 }
@@ -27,6 +27,18 @@ page {
   overflow: hidden;
 }
 
+/* 列表中每个城市项 */
+.section-body .city-name {
+  margin: 5px 10px;
+  padding: 5px 10px;
+  line-height: 1.8;
+}
+
+/* 当前城市名高亮 */
+.section-body .current-city-name {
+  color: #0781dc;
+}
+
 /* 热门城市 */
 .section-body .recommend {
   width: 25%;
@@ -34,6 +46,7 @@ page {
   padding: 10px 0;
 }
 
+/* 热门城市图标 */
 .section-body .recommend image {
   display: block;
   width: 80%;
@@ -41,22 +54,12 @@ page {
   border-radius: 50%;
 }
 
-.section-body .recommend view {
+/* 热门城市文本 */
+.section-body .recommend text {
+  display: block;
   font-size: 12px;
   text-align: center;
   margin-top: 10px;
-}
-
-/* 列表中每个城市项 */
-.section-body .city-name {
-  margin: 5px 10px;
-  line-height: 2;
-  padding: 5px 10px;
-}
-
-/* 当前城市名高亮 */
-.section-body .current-city-name {
-  color: #0781DC;
 }
 
 /* 点击城市高亮 */

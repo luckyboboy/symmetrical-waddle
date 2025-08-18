@@ -1,4 +1,3 @@
-<!-- <ad unit-id="adunit-e406b44681194b7e"></ad> -->
 <scroll-view scroll-y style="height: {{scrollHeight}}px;" scroll-with-animation="true" scroll-into-view="{{targetLetter}}" scroll-top="{{scrollTop}}">
     <!-- 当前城市 -->
     <view class="section-header current-city-header">当前城市</view>
@@ -23,14 +22,14 @@
     <view class="section-header">全部城市</view>
     <view class="section-body">
         <!-- grid -->
-        <view wx:for="{{letters}}" class="letter" bindtap="scrollToView" data-letter="{{item}}" wx:key="" hover-class="gray-bg">
+        <view wx:for="{{letters}}" class="letter" bindtap="scrollToView" data-letter="{{item}}" wx:key="" hover-class="gray-bg" hover-class="hover-class">
             {{item}}
         </view>
     </view>
     <view wx:for="{{letters}}" wx:key="" id="{{item}}">
         <view class="section-header">{{item}}</view>
         <view class="section-body">
-            <view class="city-name" wx:for="{{allCities[item]}}" wx:for-item="city" wx:key="" bindtap="selectCity" data-city-name="{{city.name}}" hover-class="city-name-hover">
+            <view class="city-name" wx:for="{{allCities[item]}}" wx:for-item="city" wx:key="" bindtap="selectCity" data-city-name="{{city.name}}" hover-class="hover-class">
                 {{city.name}}
             </view>
         </view>

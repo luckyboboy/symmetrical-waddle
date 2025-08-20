@@ -1,7 +1,7 @@
 // 引入城市数据源
 const cities = require('./utils/city.js')
 // 引入腾讯地图组件
-let QQMapWX = require('./utils/qqmap-wx-jssdk.min.js');
+const QQMapWX = require('./utils/qqmap-wx-jssdk.min.js');
 
 Page({
 	data: {
@@ -61,7 +61,7 @@ Page({
 			letters: Object.keys(this.data.allCities)
 		})
 	},
-	scrollToView(e) {
+	letterTapped(e) {
 		// 滚动视频到相应id处
 		let letter = e.currentTarget.dataset.letter
 		this.setData({
@@ -78,7 +78,7 @@ Page({
 	},
 	getLocation() {
 		// 初始化腾讯地图
-		let qqmapsdk = new QQMapWX({
+		const qqmapsdk = new QQMapWX({
 			key: 'BJFBZ-ZFTHW-Y2HRO-RL2UZ-M6EC3-GMF4U'
 		})
 		// 调用接口

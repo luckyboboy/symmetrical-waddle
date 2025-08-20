@@ -22,7 +22,7 @@
     <view class="section-header">全部城市</view>
     <view class="section-body">
         <!-- grid -->
-        <view wx:for="{{letters}}" class="letter" bindtap="scrollToView" data-letter="{{item}}" wx:key="" hover-class="gray-bg" hover-class="hover-class">
+        <view wx:for="{{letters}}" class="letter" bindtap="letterTapped" data-letter="{{item}}" wx:key="" hover-class="gray-bg" hover-class="hover-class">
             {{item}}
         </view>
     </view>

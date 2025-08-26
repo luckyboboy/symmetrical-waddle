@@ -56,20 +56,20 @@ Page({
 		})
 	},
 	generateLetters() {
-		// 从Object对象取出
+		// 从Object对象取出key得到字母数组
 		this.setData({
 			letters: Object.keys(this.data.allCities)
 		})
 	},
 	letterTapped(e) {
-		// 滚动视频到相应id处
+		// 滚动scroll-view到相应id处
 		let letter = e.currentTarget.dataset.letter
 		this.setData({
 			targetLetter: letter
 		})
 	},
 	selectCity(e) {
-		// 点击城市事件
+		// 点击城市事件，滚动scroll-view到顶部以及设定当前城市名
 		let cityName = e.currentTarget.dataset.cityName
 		this.setData({
 			currentCity: cityName,
@@ -83,9 +83,7 @@ Page({
 		})
 		// 调用接口
 		qqmapsdk.reverseGeocoder({
-			poi_options: 'policy=2',
-			get_poi: 1,
-			success: (res) => {
+			success: res => {
 				// 渲染给页面
 				this.setData({
 					geoCity: res.result.address_component.district

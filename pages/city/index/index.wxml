@@ -14,7 +14,7 @@
     <view class="section-body">
         <!-- grid -->
         <view wx:for="{{recommendCities}}" class="recommend" data-letter="{{item.name}}" wx:key="" bindtap="selectCity" data-city-name="{{item.name}}">
-            <image src="./images/{{item.pinyin}}.png" mode="widthFix"></image>
+            <image src="../images/{{item.pinyin}}.png" mode="widthFix"></image>
             <text>{{item.name}}</text>
         </view>
     </view>

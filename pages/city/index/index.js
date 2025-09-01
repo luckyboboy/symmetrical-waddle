@@ -1,7 +1,7 @@
 // 引入城市数据源
-const cities = require('./utils/city.js')
+const cities = require('../utils/city.js')
 // 引入腾讯地图组件
-const QQMapWX = require('./utils/qqmap-wx-jssdk.min.js');
+const QQMapWX = require('../utils/qqmap-wx-jssdk.min.js');
 
 Page({
 	data: {

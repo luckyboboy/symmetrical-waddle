@@ -11,7 +11,7 @@ Page({
       },
       {
         title: '城市切换',
-        url: './city/index',
+        url: './city/index/index',
       },
       {
         title: '聊天界面',

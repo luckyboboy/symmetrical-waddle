@@ -1,0 +1,76 @@
+/* 全局背景 */
+page {
+  background: #f1f1f1;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* 组头 */
+.section-header {
+  color: #acacac;
+  font-size: 12px;
+  margin: 14px;
+}
+
+/* 当前城市组标题高亮 */
+.current-city-header {
+  color: #171717;
+}
+
+/* 组体 */
+.section-body {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 3px #eee;
+  background: white;
+  margin: 5px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+/* 列表中每个城市项 */
+.section-body .city-name {
+  margin: 5px 10px;
+  padding: 5px 10px;
+  line-height: 1.8;
+}
+
+/* 当前城市名高亮 */
+.section-body .current-city-name {
+  color: #0781dc;
+}
+
+/* 点击城市高亮 */
+.section-body .hover-class {
+  background: #eee;
+}
+
+/* 热门城市 */
+.section-body .recommend {
+  width: 25%;
+  float: left;
+  padding: 10px 0;
+}
+
+/* 热门城市图标 */
+.section-body .recommend image {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+/* 热门城市文本 */
+.section-body .recommend text {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 筛选中的字母 */
+.section-body .letter {
+  width: 20%;
+  float: left;
+  text-align: center;
+  padding: 10px 0;
+}

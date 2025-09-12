@@ -1,7 +1,8 @@
 {
-  "pages":[
-    "pages/index",
+  "pages": [
     "pages/city/index/index",
+    "pages/index",
+    "pages/city/list/list",
     "pages/timeline/index",
     "pages/tab/index",
     "pages/cart/index",
@@ -9,10 +10,10 @@
     "pages/alert/index",
     "pages/radiogroup/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Mina组件库",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

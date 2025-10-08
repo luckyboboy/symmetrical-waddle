@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/city/index/index",
     "pages/index",
+    "pages/city/index/index",
     "pages/city/list/list",
     "pages/timeline/index",
     "pages/tab/index",

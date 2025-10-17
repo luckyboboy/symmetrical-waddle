@@ -1,4 +1,6 @@
 navigator {
   padding: 30px;
+  font-size: 22px;
+  color: #0781dc;
   text-align: center;
 }

@@ -1,0 +1,16 @@
+<view class="calendar">
+  <view class="header">
+    <view class="previous-year">{{'<<'}}</view>
+    <view class="previous-month">{{'<'}}</view>
+    <view class="current-year">{{currentYear}}</view>
+    <view class="current-month">{{currentMonth}}</view>
+    <view class="next-month">{{'>'}}</view>
+    <view class="next-year">{{'>>'}}</view>
+  </view>
+  <view class="body">
+    <view class="item" wx:for="{{weekIndices}}" wx:key="">{{item}}</view>
+  </view>
+  <view class="body">
+    <view wx:for="{{daysArray}}" class="item" wx:key="">{{item}}</view>
+  </view>
+</view>

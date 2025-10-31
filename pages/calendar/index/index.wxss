@@ -1,0 +1,40 @@
+/* 整个日历组件 */
+.calendar {
+  width: 80%;
+  margin: 15px auto;
+  border: 1px solid #ddd;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 3px #eee;
+}
+
+
+/* 切换年月 */
+.calendar .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+/* 天数网格 */
+.calendar .body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+
+
+/* 天 */
+.calendar .body .item {
+  flex: 1;
+  width: 14.28%;
+  min-width: 14.28%;
+  max-width: 14.28%;
+  text-align: center;
+  padding: 4px 0;
+  font-size: 16px;
+}

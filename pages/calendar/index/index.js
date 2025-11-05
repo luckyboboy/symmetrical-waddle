@@ -29,7 +29,7 @@ Page({
     // 本月共几天
     let dayCount = moment(endDayOfCurrentMonth).diff(moment(startDayOfCurrentMonth), 'days')
     // console.log(dayCount)
-    let daysArray = []
+    let daysArray = Array(moment(startDayOfCurrentMonth).days()).fill('')
     for (let i = 1; i <= dayCount; i++) {
       daysArray.push(i)
     }

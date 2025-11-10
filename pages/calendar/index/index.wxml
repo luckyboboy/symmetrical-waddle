@@ -11,6 +11,10 @@
     <view class="item" wx:for="{{weekIndices}}" wx:key="">{{item}}</view>
   </view>
   <view class="body">
-    <view wx:for="{{daysArray}}" class="item" wx:key="">{{item}}</view>
+    <view wx:for="{{daysArray}}" class="item" wx:key="">
+      <view class="day">{{item}}</view>
+      <view class="lunar">{{lunarArray[index]}}</view>
+    </view>
+    <!-- <view wx:for="{{lunarArray}}" class="item" wx:key="">{{item}}</view> -->
   </view>
 </view>

@@ -1,7 +1,6 @@
 /* 整个日历组件 */
 .calendar {
-  width: 80%;
-  margin: 15px auto;
+  margin: 15px;
   border: 1px solid #ddd;
   padding: 5px;
   box-sizing: border-box;
@@ -37,4 +36,9 @@
   text-align: center;
   padding: 4px 0;
   font-size: 16px;
+}
+
+.calendar .body .item .lunar {
+  color: #666;
+  font-size: 12px;
 }

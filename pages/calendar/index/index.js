@@ -7,8 +7,6 @@ Page({
     weekIndices: ['日', '一', '二', '三', '四', '五', '六']
   },
   onLoad() {
-    // const lunar2solarData = solarLunar.lunar2solar(2015, 8, 26); // 输入的日子为农历
-    // console.log(lunar2solarData)
     // 当天日期
     let today = moment()
     // 当年
@@ -29,12 +27,23 @@ Page({
     // 本月共几天
     let dayCount = moment(endDayOfCurrentMonth).diff(moment(startDayOfCurrentMonth), 'days')
     // console.log(dayCount)
+    // 填充空字符串，使得本周向右偏移，代替CSS pull-right操作
     let daysArray = Array(moment(startDayOfCurrentMonth).days()).fill('')
     for (let i = 1; i <= dayCount; i++) {
       daysArray.push(i)
     }
+    // 换算农历
+    let lunarArray = daysArray.map(item => {
+      if (item != '') {
+        const lunar2solarData = solarLunar.solar2lunar(currentYear, currentMonth, item); // 输入的日子为农历
+        console.log(lunar2solarData)
+        return lunar2solarData.dayCn
+      }
+      return item
+    })
     this.setData({
-      daysArray: daysArray
+      daysArray: daysArray,
+      lunarArray: lunarArray
     })
     // console.log(daysArray)
   }

@@ -20,15 +20,15 @@ Page({
     })
     // 本月开始日期
     let startDayOfCurrentMonth = `${currentYear}-${currentMonth}-01`
-    // 计算本月1号是周几
-    // console.log(moment(startDayOfCurrentMonth).days())
     // 本月结束日期
     let endDayOfCurrentMonth = moment(startDayOfCurrentMonth).add(1, 'month').format('YYYY-MM-DD')
     // 本月共几天
     let dayCount = moment(endDayOfCurrentMonth).diff(moment(startDayOfCurrentMonth), 'days')
     // console.log(dayCount)
-    // 填充空字符串，使得本周向右偏移，代替CSS pull-right操作
-    let daysArray = Array(moment(startDayOfCurrentMonth).days()).fill('')
+    // 计算本月1号是周几
+    let offset = moment(startDayOfCurrentMonth).days()
+    // 填充空字符串，使得本周向右偏移，代替CSS pull-right操作，
+    let daysArray = Array(offset).fill('')
     for (let i = 1; i <= dayCount; i++) {
       daysArray.push(i)
     }

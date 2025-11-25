@@ -1,11 +1,11 @@
 <view class="calendar">
   <view class="header">
-    <view class="previous-year">{{'<<'}}</view>
-    <view class="previous-month">{{'<'}}</view>
+    <view class="previous-year" bindtap="previousYear">{{'<<'}}</view>
+    <view class="previous-month" bindtap="previousMonth">{{'<'}}</view>
     <view class="current-year">{{currentYear}}</view>
     <view class="current-month">{{currentMonth}}</view>
-    <view class="next-month">{{'>'}}</view>
-    <view class="next-year">{{'>>'}}</view>
+    <view class="next-month" bindtap="nextMonth">{{'>'}}</view>
+    <view class="next-year" bindtap="nextYear">{{'>>'}}</view>
   </view>
   <view class="body">
     <view class="item" wx:for="{{weekIndices}}" wx:key="">{{item}}</view>

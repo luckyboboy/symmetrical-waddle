@@ -23,25 +23,29 @@ Page({
     })
     this.generateData()
   },
+  previousYear() {
+    // 上一年
+    this.setData({
+      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'years').format('YYYY')
+    })
+    this.generateData()
+  },
   previousMonth() {
+    // 上一月
     this.setData({
       currentMonth: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'months').format('MM')
     })
     this.generateData()
   },
   nextMonth() {
+    // 下一月
     this.setData({
       currentMonth: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).add(1, 'months').format('MM')
     })
     this.generateData()
   },
-  previousYear() {
-    this.setData({
-      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'years').format('YYYY')
-    })
-    this.generateData()
-  },
   nextYear() {
+    // 下一年
     this.setData({
       currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).add(1, 'years').format('YYYY')
     })

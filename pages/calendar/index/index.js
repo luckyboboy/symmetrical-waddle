@@ -10,12 +10,10 @@ Page({
     this.initData()
   },
   initData() {
-    // 当天日期
-    let today = moment()
     // 当年
-    let currentYear = today.format('YYYY')
+    let currentYear = moment().format('YYYY')
     // 当月
-    let currentMonth = today.format('MM')
+    let currentMonth = moment().format('MM')
     // 渲染到页面
     this.setData({
       currentYear: currentYear,
@@ -32,15 +30,19 @@ Page({
   },
   previousMonth() {
     // 上一月
+    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'months')
     this.setData({
-      currentMonth: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'months').format('MM')
+      currentMonth: date.format('MM'),
+      currentYear: date.format('YYYY'),
     })
     this.generateData()
   },
   nextMonth() {
     // 下一月
+    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).add(1, 'months')
     this.setData({
-      currentMonth: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).add(1, 'months').format('MM')
+      currentMonth: date.format('MM'),
+      currentYear: date.format('YYYY'),
     })
     this.generateData()
   },

@@ -73,7 +73,8 @@ Page({
       if (item != '') {
         const lunar2solarData = solarLunar.solar2lunar(this.data.currentYear, this.data.currentMonth, item); // 输入的日子为农历
         // console.log(lunar2solarData)
-        return lunar2solarData.dayCn
+        let dayCn = lunar2solarData.dayCn == '初一' ? lunar2solarData.monthCn : lunar2solarData.dayCn
+        return dayCn
       }
       return item
     })

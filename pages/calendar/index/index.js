@@ -13,7 +13,7 @@ Page({
     // 当年
     let currentYear = moment().format('YYYY')
     // 当月
-    let currentMonth = moment().format('MM')
+    let currentMonth = moment().format('M')
     // 渲染到页面
     this.setData({
       currentYear: currentYear,
@@ -54,24 +54,24 @@ Page({
   previousYear() {
     // 上一年
     this.setData({
-      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'years').format('YYYY')
+      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-1`).subtract(1, 'years').format('YYYY')
     })
     this.generateData()
   },
   previousMonth() {
     // 上一月
-    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'months')
+    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-1`).subtract(1, 'months')
     this.setData({
-      currentMonth: date.format('MM'),
+      currentMonth: date.format('M'),
       currentYear: date.format('YYYY'),
     })
     this.generateData()
   },
   nextMonth() {
     // 下一月
-    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).add(1, 'months')
+    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-1`).add(1, 'months')
     this.setData({
-      currentMonth: date.format('MM'),
+      currentMonth: date.format('M'),
       currentYear: date.format('YYYY'),
     })
     this.generateData()
@@ -79,13 +79,13 @@ Page({
   nextYear() {
     // 下一年
     this.setData({
-      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).add(1, 'years').format('YYYY')
+      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-1`).add(1, 'years').format('YYYY')
     })
     this.generateData()
   },
   generateData() {
     // 本月开始日期
-    let startDayOfCurrentMonth = `${this.data.currentYear}-${this.data.currentMonth}-01`
+    let startDayOfCurrentMonth = `${this.data.currentYear}-${this.data.currentMonth}-1`
     // 本月结束日期
     let endDayOfCurrentMonth = moment(startDayOfCurrentMonth).add(1, 'month').format('YYYY-MM-DD')
     // 本月共几天

@@ -2,8 +2,16 @@
   <view class="header">
     <view class="previous-year" bindtap="previousYear">{{'<<'}}</view>
     <view class="previous-month" bindtap="previousMonth">{{'<'}}</view>
-    <view class="current-year">{{currentYear}}</view>
-    <view class="current-month">{{currentMonth}}</view>
+    <view class="current-year">
+      <picker bindchange="bindYearChange" value="{{yearIndex}}" range="{{yearArray}}">
+        {{currentYear}}
+      </picker>
+    </view>
+    <view class="current-month">
+      <picker bindchange="bindMonthChange" value="{{monthIndex}}" range="{{monthArray}}">
+        {{currentMonth}}
+      </picker>
+    </view>
     <view class="next-month" bindtap="nextMonth">{{'>'}}</view>
     <view class="next-year" bindtap="nextYear">{{'>>'}}</view>
   </view>

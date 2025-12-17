@@ -19,6 +19,36 @@ Page({
       currentYear: currentYear,
       currentMonth: currentMonth
     })
+    // 生成年份选择器数据
+    let yearArray = []
+    for (let index = 1900; index < 2100; index++) {
+      yearArray.push(index)
+    }
+    // 生成月份选择器数据
+    let monthArray = []
+    for (let index = 1; index < 12; index++) {
+      monthArray.push(index)
+    }
+    // 渲染到页面
+    this.setData({
+      yearArray: yearArray,
+      monthArray: monthArray
+    })
+    // 生成当前月份天数集合
+    this.generateData()
+  },
+  // 切换年份
+  bindYearChange: function (e) {
+    this.setData({
+      currentYear: this.data.yearArray[e.detail.value]
+    })
+    this.generateData()
+  },
+  // 切换月份
+  bindMonthChange: function (e) {
+    this.setData({
+      currentMonth: this.data.monthArray[e.detail.value]
+    })
     this.generateData()
   },
   previousYear() {
@@ -81,6 +111,11 @@ Page({
     this.setData({
       daysArray: daysArray,
       lunarArray: lunarArray
+    })
+    // 为picker计算当前年份月份所在yearArray的index
+    this.setData({
+      yearIndex: this.data.yearArray.indexOf(Number(this.data.currentYear)),
+      monthIndex: this.data.monthArray.indexOf(Number(this.data.currentMonth))
     })
     // console.log(daysArray)
   }

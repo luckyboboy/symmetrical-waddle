@@ -13,7 +13,7 @@ Page({
     // 当年
     let currentYear = moment().format('YYYY')
     // 当月
-    let currentMonth = moment().format('M')
+    let currentMonth = moment().format('MM')
     // 渲染到页面
     this.setData({
       currentYear: currentYear,
@@ -22,12 +22,12 @@ Page({
     // 生成年份选择器数据
     let yearArray = []
     for (let index = 1900; index < 2100; index++) {
-      yearArray.push(index)
+      yearArray.push(String(index))
     }
     // 生成月份选择器数据
     let monthArray = []
     for (let index = 1; index < 12; index++) {
-      monthArray.push(index)
+      monthArray.push(index < 10 ? '0' + index : index)
     }
     // 渲染到页面
     this.setData({
@@ -54,24 +54,24 @@ Page({
   previousYear() {
     // 上一年
     this.setData({
-      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-1`).subtract(1, 'years').format('YYYY')
+      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'years').format('YYYY')
     })
     this.generateData()
   },
   previousMonth() {
     // 上一月
-    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-1`).subtract(1, 'months')
+    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).subtract(1, 'months')
     this.setData({
-      currentMonth: date.format('M'),
+      currentMonth: date.format('MM'),
       currentYear: date.format('YYYY'),
     })
     this.generateData()
   },
   nextMonth() {
     // 下一月
-    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-1`).add(1, 'months')
+    let date = moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).add(1, 'months')
     this.setData({
-      currentMonth: date.format('M'),
+      currentMonth: date.format('MM'),
       currentYear: date.format('YYYY'),
     })
     this.generateData()
@@ -79,13 +79,13 @@ Page({
   nextYear() {
     // 下一年
     this.setData({
-      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-1`).add(1, 'years').format('YYYY')
+      currentYear: moment(`${this.data.currentYear}-${this.data.currentMonth}-01`).add(1, 'years').format('YYYY')
     })
     this.generateData()
   },
   generateData() {
     // 本月开始日期
-    let startDayOfCurrentMonth = `${this.data.currentYear}-${this.data.currentMonth}-1`
+    let startDayOfCurrentMonth = `${this.data.currentYear}-${this.data.currentMonth}-01`
     // 本月结束日期
     let endDayOfCurrentMonth = moment(startDayOfCurrentMonth).add(1, 'month').format('YYYY-MM-DD')
     // 本月共几天
@@ -114,8 +114,8 @@ Page({
     })
     // 为picker计算当前年份月份所在yearArray的index
     this.setData({
-      yearIndex: this.data.yearArray.indexOf(Number(this.data.currentYear)),
-      monthIndex: this.data.monthArray.indexOf(Number(this.data.currentMonth))
+      yearIndex: this.data.yearArray.indexOf(this.data.currentYear),
+      monthIndex: this.data.monthArray.indexOf(this.data.currentMonth)
     })
     // console.log(daysArray)
   }

@@ -28,6 +28,10 @@ Page({
       {
         title: '时间轴',
         url: './timeline/index',
+      },
+      {
+        title: '万年历',
+        url: './calendar/index/index',
       }
     ]
   }

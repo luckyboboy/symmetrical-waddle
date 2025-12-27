@@ -26,7 +26,7 @@ Page({
     }
     // 生成月份选择器数据
     let monthArray = []
-    for (let index = 1; index < 12; index++) {
+    for (let index = 1; index <= 12; index++) {
       monthArray.push(index < 10 ? '0' + index : index)
     }
     // 渲染到页面

@@ -23,6 +23,6 @@
       <view class="day">{{item}}</view>
       <view class="lunar">{{lunarArray[index]}}</view>
     </view>
-    <!-- <view wx:for="{{lunarArray}}" class="item" wx:key="">{{item}}</view> -->
   </view>
 </view>
+<ad unit-id="adunit-e406b44681194b7e"></ad>

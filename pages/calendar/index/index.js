@@ -95,22 +95,33 @@ Page({
     // 计算本月1号是周几
     let offset = moment(startDayOfCurrentMonth).days()
     // 填充空字符串，使得本周向右偏移，代替CSS pull-right操作，
-    let daysArray = Array(offset).fill('')
-    for (let i = 1; i <= dayCount; i++) {
-      daysArray.push(i)
+    let dateArray = []
+    // 上一个月补足日期
+    for (let index = offset; index > 0; index--) {
+      dateArray.push(moment(startDayOfCurrentMonth).subtract(index, 'day').format('YYYY-MM-DD'))
     }
+    // 本月日期
+    for (let i = 1; i <= dayCount; i++) {
+      let date = moment(`${this.data.currentYear}${this.data.currentMonth}${i}`, 'YYYYMMD').format('YYYY-MM-DD')
+      dateArray.push(date)
+    }
+    // 下一个月补足日期
+    let nextOffset = 7 - moment(endDayOfCurrentMonth).days()
+    for (let index = 0; index < nextOffset; index++) {
+      dateArray.push(moment(endDayOfCurrentMonth).add(index, 'day').format('YYYY-MM-DD'))
+    }
+    console.log(dateArray)
     // 换算农历
-    let lunarArray = daysArray.map(item => {
-      if (item != '') {
-        const lunar2solarData = solarLunar.solar2lunar(this.data.currentYear, this.data.currentMonth, item); // 输入的日子为农历
-        // console.log(lunar2solarData)
-        let dayCn = lunar2solarData.dayCn == '初一' ? lunar2solarData.monthCn : lunar2solarData.dayCn
-        return dayCn
-      }
-      return item
+    let lunarArray = dateArray.map(item => {
+      const lunar2solarData = solarLunar.solar2lunar(moment(item).format('YYYY'), moment(item).format('MM'), moment(item).format('DD')); // 输入的日子为农历
+      // console.log(lunar2solarData)
+      let dayCn = lunar2solarData.dayCn == '初一' ? lunar2solarData.monthCn : lunar2solarData.dayCn
+      return dayCn
     })
     this.setData({
-      daysArray: daysArray,
+      daysArray: dateArray.map(item => {
+        return moment(item).format('D')
+      }),
       lunarArray: lunarArray
     })
     // 为picker计算当前年份月份所在yearArray的index

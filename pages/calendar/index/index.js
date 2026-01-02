@@ -1,4 +1,5 @@
-// 农历转换库取自https://www.npmjs.com/package/solarlunar，感谢作者
+// 农历转换库取自https://www.npmjs.com/package/solarlunar，感谢作者yize
+
 const solarLunar = require('../utils/solarlunar.min')
 const moment = require('../utils/moment.min')
 

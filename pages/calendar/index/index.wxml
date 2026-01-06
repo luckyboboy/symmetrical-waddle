@@ -20,7 +20,7 @@
   </view>
   <view class="body">
     <view wx:for="{{daysArray}}" class="item" wx:key="">
-      <view class="day">{{item}}</view>
+      <view class="day {{index < range[0] || index > range[1] ? 'gray' : ''}}">{{item}}</view>
       <view class="lunar">{{lunarArray[index]}}</view>
     </view>
   </view>

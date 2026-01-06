@@ -110,7 +110,6 @@ Page({
     for (let index = 0; index < nextOffset; index++) {
       dateArray.push(moment(endDayOfCurrentMonth).add(index, 'day').format('YYYY-MM-DD'))
     }
-    console.log(dateArray)
     // 换算农历
     let lunarArray = dateArray.map(item => {
       const lunar2solarData = solarLunar.solar2lunar(moment(item).format('YYYY'), moment(item).format('MM'), moment(item).format('DD')); // 输入的日子为农历
@@ -119,6 +118,7 @@ Page({
       return dayCn
     })
     this.setData({
+      range: [offset, offset + dayCount - 1],
       daysArray: dateArray.map(item => {
         return moment(item).format('D')
       }),

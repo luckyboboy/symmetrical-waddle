@@ -34,5 +34,12 @@ Page({
         url: './calendar/index/index',
       }
     ]
-  }
+  },
+  onShareAppMessage: function () {
+		return {
+			title: 'Mina组件库',
+			desc: '汇集高频使用的组件',
+			path: '/home/index/index'
+		}
+	},
 })

@@ -1,4 +1,4 @@
-<scroll-view scroll-y style="height: {{scrollHeight}}px;" scroll-with-animation="true" scroll-into-view="{{targetLetter}}">
+<scroll-view scroll-y scroll-top="100" style="height: {{scrollHeight}}px;" scroll-with-animation="true" scroll-into-view="{{targetLetter}}">
     <!-- 当前城市 -->
     <view class="section-header current-city-header">当前城市</view>
     <view class="section-body">

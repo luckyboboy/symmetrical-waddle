@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/scrolltop/index/index",
     "pages/index",
     "pages/calendar/index/index",
     "pages/city/index/index",

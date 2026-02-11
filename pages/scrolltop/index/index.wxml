@@ -1,4 +1,4 @@
 <scroll-view scroll-top="{{scrollTop}}" scroll-y style="height: {{scrollHeight}}px" scroll-with-animation bindscroll="scroll">
-  <image src="../images/banner.jpg" mode="widthFix" style="width: 100%" wx:for="188855454" wx:key="" />
+  <image src="../images/banner.jpg" mode="widthFix" style="width: 100%" wx:for="188855121121454" wx:key="" />
 </scroll-view>
-<image src="../images/top.png" style="width: 40px; height: 40px; position: fixed; right: 50px; bottom: 50px;" bindtap="goTop" wx:if="{{visual}}" />
+<image src="../images/top.png" style="width: 40px; height: 40px; position: fixed; right: 40px; bottom: 40px;" bindtap="goTop" wx:if="{{visual}}" class="{{animation}}" />

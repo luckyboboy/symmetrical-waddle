@@ -11,7 +11,7 @@ Page({
   },
   scroll(e) {
     let scrollTop = e.detail.scrollTop
-    // 如果大于半屏
+    // 如果超过半屏
     if (scrollTop > this.data.scrollHeight / 2) {
       this.setData({
         visual: true,

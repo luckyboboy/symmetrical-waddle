@@ -32,6 +32,10 @@ Page({
       {
         title: '万年历',
         url: './calendar/index/index',
+      },
+      {
+        title: '回到顶部',
+        url: './scrolltop/index/index',
       }
     ]
   },

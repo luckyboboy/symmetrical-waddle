@@ -1,0 +1,88 @@
+/*播放器*/
+video {
+	width: 100%;
+}
+
+/*课程标题*/
+.title {
+	font-size: 32rpx;
+	line-height: 50rpx;
+	color: #555;
+	padding: 10rpx 20rpx;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+}
+
+/*课程简介*/
+.description {
+	color: gray;
+	font-size:26rpx;
+	line-height:46rpx;
+	margin: 20rpx;
+}
+
+/*行布局*/
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.chapter-container {
+	margin: 20rpx 0;
+}
+
+/*章节行*/
+.chapter-item {
+	color: gray;
+	padding: 8rpx 32rpx;
+	font-size: 28rpx;
+	line-height: 56rpx;
+}
+
+/*行选中状态*/
+.chapter-item-selected {
+	color: #0f88eb;
+}
+
+/*章节标题*/
+.chapter-title {
+	display: block;
+	width: 100%;
+}
+
+/*时长*/
+.chapter-minutes {
+	display: block;
+	width: 200rpx;
+	text-align: right;
+}
+
+/*课程封面*/
+.cover {
+	width: 100%;
+	opacity: 0.2;
+}
+
+/*支付按钮*/
+.payButton {
+/*	
+	padding: 0 8px;
+	border-radius: 6px;
+	text-align: center;
+*/	
+	border: 1px solid #48c23d;
+	color: #48c23d;
+	width: 160px;
+	position: absolute;
+
+}
+
+.payButton:before {
+	content: '￥';
+}
+
+/*覆盖默认button的样式*/
+.payButton:after {
+	border: 0;
+}

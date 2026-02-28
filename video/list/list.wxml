@@ -1,0 +1,9 @@
+<!-- new arrival course -->
+<view class="container-course">
+	<view class="main-course">
+		<view class="single-course" wx:for="{{newCourse}}" wx:key="" bindtap="showDetail" data-index="{{index}}" data-object-id="{{item.objectId}}">
+			<image class="avatar" src="{{item.cover._url}}" mode="widthFix" />
+			<text class="title">{{item.title}}</text>
+		</view>
+	</view>
+</view>

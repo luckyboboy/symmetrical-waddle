@@ -43,7 +43,7 @@ Page({
 		return {
 			title: 'Mina组件库',
 			desc: '汇集高频使用的组件',
-			path: '/home/index/index'
+			path: '/pages/index'
 		}
 	},
 })

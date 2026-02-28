@@ -1,0 +1,91 @@
+page {
+	background: #eee;
+}
+
+.swiper-image {
+	width: 100%;
+	height: 100%;
+}
+
+.orange {
+	background: #f60;
+}
+
+.blue {
+	background: #09f;
+}
+
+/*主商品区*/
+.container-course {
+	margin-top: 10px;
+	background: white;
+}
+
+.container-course .caption {
+	font-size: 32rpx;
+	width: 100%;
+	line-height: 70rpx;
+	text-indent: 30rpx;
+	display: block;
+}
+
+.main-course {
+/*	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+*/	border-top: 1px solid #eee;
+	background: white;
+	display: inline-block;
+	width: 100%;
+}
+
+.main-course .single-course {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-course image {
+	width: 90%;
+	height: 140rpx;
+	display: block;
+	margin: 20rpx auto;
+	border-radius: 20px;
+}
+
+.main-course .title {
+	display: block;
+	width: 90%;
+	color: #999;
+	font-size: 28rpx;
+	margin: 10rpx 6rpx;
+	height: 60rpx;
+	line-height: 32rpx;
+	overflow: hidden;
+	text-align: center;
+}
+
+.main-course .summary {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.main-course .summary text {
+	font-size: 28rpx;
+	margin: 10rpx 20rpx;
+}
+
+.main-course .summary .price {
+	color: #48c23d;
+}
+
+.main-course .summary .price:after {
+	content: '人数';
+}
+
+.main-course .summary .sale {
+	color: gray;
+}
+

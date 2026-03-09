@@ -17,7 +17,6 @@ page {
 
 /*主商品区*/
 .container-course {
-	margin-top: 10px;
 	background: white;
 }
 
@@ -44,6 +43,8 @@ page {
 	display: block;
 	float: left;
 	width: 100%;
+	border-bottom: 1px solid #ddd;
+	padding-top: 10px;
 }
 
 .main-course image {
@@ -57,12 +58,14 @@ page {
 .main-course .title {
 	display: block;
 	width: 90%;
-	color: #999;
-	font-size: 28rpx;
-	margin: 10rpx 6rpx;
+	color: #333;
+	font-size: 38rpx;
+	margin: 20rpx 6rpx;
+	margin-bottom: 10rpx;
 	height: 60rpx;
-	line-height: 32rpx;
+	line-height: 38rpx;
 	overflow: hidden;
+	padding-top: 10rpx;
 	text-align: center;
 }
 
@@ -89,3 +92,6 @@ page {
 	color: gray;
 }
 
+.avatar {
+	background: #eee;
+}

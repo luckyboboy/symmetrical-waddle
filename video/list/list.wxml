@@ -1,9 +1,12 @@
 <!-- new arrival course -->
 <view class="container-course">
-	<view class="main-course">
-		<view class="single-course" wx:for="{{newCourse}}" wx:key="" bindtap="showDetail" data-index="{{index}}" data-object-id="{{item.objectId}}">
-			<image class="avatar" src="{{item.cover._url}}" mode="widthFix" />
-			<text class="title">{{item.title}}</text>
+		<view class="main-course">
+				<block wx:for="{{newCourse}}" wx:key="">
+						<view class="single-course" bindtap="showDetail" data-index="{{index}}" data-object-id="{{item.objectId}}">
+								<image class="avatar" src="{{item.cover._url}}" mode="widthFix" />
+								<text class="title">{{item.title}}</text>
+						</view>
+						<ad unit-id="adunit-011489a5d87cfc22" wx:if="{{index % 2 == (2 - 1)}}"></ad>
+				</block>
 		</view>
-	</view>
 </view>

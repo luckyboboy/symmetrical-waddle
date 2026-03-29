@@ -16,8 +16,8 @@ video {
 /*课程简介*/
 .description {
 	color: gray;
-	font-size:26rpx;
-	line-height:46rpx;
+	font-size: 26rpx;
+	line-height: 46rpx;
 	margin: 20rpx;
 }
 
@@ -30,6 +30,7 @@ video {
 
 .chapter-container {
 	margin: 20rpx 0;
+	margin-bottom: 150px
 }
 
 /*章节行*/
@@ -66,11 +67,11 @@ video {
 
 /*支付按钮*/
 .payButton {
-/*	
+	/*	
 	padding: 0 8px;
 	border-radius: 6px;
 	text-align: center;
-*/	
+*/
 	border: 1px solid #48c23d;
 	color: #48c23d;
 	width: 160px;
@@ -85,4 +86,11 @@ video {
 /*覆盖默认button的样式*/
 .payButton:after {
 	border: 0;
+}
+
+.ad {
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
 }

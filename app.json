@@ -1,7 +1,7 @@
 {
   "pages": [
-    "video/list/list",
     "pages/index",
+    "video/list/list",
     "video/detail/detail",
     "pages/scrolltop/index/index",
     "pages/calendar/index/index",

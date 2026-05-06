@@ -1,0 +1,14 @@
+page {
+  position: relative;
+}
+.menu {
+  border-radius: 16px;
+  padding: 8px;
+  background: #cccccccc;
+  z-index: 888;
+  position: fixed;
+  top: 50%;
+  /* margin-top视字母数量而定 */
+  margin-top: -100px;
+  right: 20px;
+}

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/transfer/list/list",
     "pages/index",
     "video/list/list",
     "video/detail/detail",

@@ -41,6 +41,10 @@
 ### 9.回到顶部
 ![scrolltop.gif](https://upload-images.jianshu.io/upload_images/2599324-dfa6c2ee0619e372.gif?imageMogr2/auto-orient/strip)
 
+### 10.页面穿梭
+
+![transfer.gif](https://upload-images.jianshu.io/upload_images/2599324-482eb18ac362185e.gif?imageMogr2/auto-orient/strip)
+
 ### 更多请关注
 
 ![分答提问](https://upload-images.jianshu.io/upload_images/2599324-2ad8c4ab82f1fae9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

@@ -36,6 +36,10 @@ Page({
       {
         title: '回到顶部',
         url: './scrolltop/index/index',
+      },
+      {
+        title: '页面穿梭',
+        url: './transfer/list/list',
       }
     ]
   },

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/transfer/list/list",
     "pages/index",
+    "pages/transfer/list/list",
     "video/list/list",
     "video/detail/detail",
     "pages/scrolltop/index/index",

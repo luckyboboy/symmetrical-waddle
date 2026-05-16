@@ -1,6 +1,6 @@
-  <view class="menu">
-    <view wx:for="{{letters}}" bindtap="transfer" data-letter="{{item}}" wx:key="">{{item}}</view>
-  </view>
+<view class="menu">
+  <view wx:for="{{letters}}" bindtap="transfer" data-letter="{{item}}" wx:key="">{{item}}</view>
+</view>
 <scroll-view scroll-y scroll-with-animation style="height: {{scrollHeight}}px" scroll-into-view="{{toView}}">
   <view wx:for="{{letters}}" wx:key="">
     <view id="{{item}}" style="font-size: 18px;">{{item}}</view>

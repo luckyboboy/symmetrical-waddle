@@ -10,3 +10,5 @@
 				</block>
 		</view>
 </view>
+<!-- 提示语 -->
+<loading-tips loading-tip="{{loadingTip}}"></loading-tips>

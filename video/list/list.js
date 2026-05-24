@@ -10,7 +10,7 @@ var Bmob = require('../../utils/bmob.js');
 
 var that;
 var page;
-var pageSize = 10;
+var pageSize = 3;
 Page({
 	data: {
 		newCourse: []
@@ -37,11 +37,10 @@ Page({
 	    // 排序按照创建日期
 	    query.find({
 	    	success: function(result) {
-		        // 隐藏toast提示框
-				wx.hideToast();
 				// 保存数据
 				that.setData({
-					newCourse: that.data.newCourse.concat(result)
+					newCourse: that.data.newCourse.concat(result),
+					loadingTip: result.length < pageSize ? '已经没有更多啦' : '上拉加载更多'
 				});
 			},
 			error: function(object, error) {
@@ -68,18 +67,6 @@ Page({
 	},
 	onReachBottom: function () {
 		// 到达底部无限加载
-		if (that.page.pageNo >= that.page.pageCount) {
-			wx.showToast({
-				title: '没有更多内容了',
-				icon: 'success'
-			});
-			return;
-		}
 		that.loadNewCourse(that.page.pageNo * pageSize);
-		wx.showToast({
-			title: '正在加载',
-			icon: 'loading',
-			duration: 2000
-		})
 	}
 })

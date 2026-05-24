@@ -1,0 +1,6 @@
+/*上拉加载提示*/
+.loading-indicator {
+	text-align: center;
+	font-size: 12px;
+	margin: 10px 0;
+}

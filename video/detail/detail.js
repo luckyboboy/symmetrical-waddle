@@ -19,6 +19,9 @@ Page({
     onLoad: function (options) {
         that = this;
         that.findCourseDetail(options.objectId);
+        this.setData({
+            objectId: options.objectId
+        })
     },
     findCourseDetail: function (objectId) {
         // 找出该课程对象
@@ -104,5 +107,13 @@ Page({
             content: '请移步服务号【灵动云课程】购买',
             showCancel: false
         });
-    }
+    },
+    onShareAppMessage: function () {
+		// 微信分享
+		return {
+			title: '实战视频',
+			desc: this.data.course.get('title'),
+			path: '/video/detail/detail?objectId=' + this.data.objectId
+		}
+	},
 })

@@ -34,4 +34,11 @@ Page({
 	preventDefault: function () {
 		// 什么都不做，只为阻止父元素点击hide事件
 	},
+	onShareAppMessage: function () {
+		return {
+			title: 'Mina常用组件',
+			desc: '弹窗',
+			path: getApp().share()
+		}
+	}
 })

@@ -108,12 +108,19 @@ Page({
             showCancel: false
         });
     },
+    // onShareAppMessage: function () {
+	// 	// 微信分享
+	// 	return {
+	// 		title: '实战视频',
+	// 		desc: this.data.course.get('title'),
+	// 		path: '/video/detail/detail?objectId=' + this.data.objectId
+	// 	}
+    // },
     onShareAppMessage: function () {
-		// 微信分享
 		return {
 			title: '实战视频',
 			desc: this.data.course.get('title'),
-			path: '/video/detail/detail?objectId=' + this.data.objectId
+			path: getApp().share()
 		}
-	},
+	}
 })

@@ -12,9 +12,9 @@ App({
     let options = currentPage.options //如果要获取url中所带的参数可以查看options
     if (Object.keys(options).length > 0) {
       url += '?'
-      Object.keys(options).forEach(key => {
-        url += `${key}=${options[key]}`
-      });
+      url += Object.keys(options).map(key => {
+        return `${key}=${options[key]}`
+      }).join('&')
     }
     // console.log(url)
     return url

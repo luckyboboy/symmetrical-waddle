@@ -8,11 +8,11 @@
 <view class="title">全部章节</view>
 <!-- 章节列表 -->
 <view class="chapter-container">
-		<view class="row chapter-item {{index == chapterIndex ? 'chapter-item-selected' : ''}}" wx:for="{{chapterObjects}}" wx:key="" bindtap="chapterTapped" data-index="{{index}}">
+		<block wx:for="{{chapterObjects}}" wx:key="">
+		<view class="row chapter-item {{index == chapterIndex ? 'chapter-item-selected' : ''}}" bindtap="chapterTapped" data-index="{{index}}">
 				<text class="chapter-title">第{{index + 1}}节 {{item.title}}</text>
 				<text class="chapter-minutes">{{item.minutes}}分钟</text>
 		</view>
+		<ad unit-id="adunit-e406b44681194b7e" wx:if="{{index % 3 == (3 - 1)}}"></ad>
+		</block>
 </view>
-<div class="ad">
-		<ad unit-id="adunit-e406b44681194b7e"></ad>
-</div>

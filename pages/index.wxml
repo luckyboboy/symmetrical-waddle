@@ -2,11 +2,13 @@
     <view class="page__bd">
         <view class="weui-cells__title">例子</view>
         <view class="weui-cells weui-cells_after-title">
-            <navigator wx:for="{{items}}" url="{{item.url}}" wx:key="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <block wx:for="{{items}}" wx:key="">
+            <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">{{index + 1}}.{{item.title}}</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
+            <ad unit-id="adunit-011489a5d87cfc22" wx:if="{{index % 5 == (5 - 1)}}"></ad>
+            </block>
         </view>
     </view>
-    <ad unit-id="adunit-011489a5d87cfc22"></ad>
 </view>

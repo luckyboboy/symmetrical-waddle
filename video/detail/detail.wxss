@@ -30,7 +30,6 @@ video {
 
 .chapter-container {
 	margin: 20rpx 0;
-	margin-bottom: 150px
 }
 
 /*章节行*/
@@ -86,11 +85,4 @@ video {
 /*覆盖默认button的样式*/
 .payButton:after {
 	border: 0;
-}
-
-.ad {
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	width: 100%;
 }

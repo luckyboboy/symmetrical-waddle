@@ -13,6 +13,6 @@
 				<text class="chapter-title">第{{index + 1}}节 {{item.title}}</text>
 				<text class="chapter-minutes">{{item.minutes}}分钟</text>
 		</view>
-		<ad unit-id="adunit-e406b44681194b7e" wx:if="{{index % 3 == (3 - 1)}}"></ad>
+		<ad unit-id="adunit-e406b44681194b7e" wx:if="{{index % 5 == (5 - 1)}}"></ad>
 		</block>
 </view>

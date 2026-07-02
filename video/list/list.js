@@ -7,6 +7,7 @@
  */
 
 var Bmob = require('../../utils/bmob.js');
+const utils = require('../../utils/utils')
 
 var that;
 var page;
@@ -39,7 +40,7 @@ Page({
 	    	success: function(result) {
 				// 保存数据
 				that.setData({
-					newCourse: that.data.newCourse.concat(result),
+					newCourse: that.data.newCourse.concat(utils.formatResults(result)),
 					loadingTip: result.length < pageSize ? '已经没有更多啦' : '上拉加载更多'
 				});
 			},

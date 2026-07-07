@@ -1,0 +1,6 @@
+<button bindtap="choose">选择图片</button>
+<view class="item" wx:for="{{info}}" wx:key="">
+  <view class="label">{{item.item}}</view>
+  <view class="value" bindtap="copy" data-str="{{item.itemstring}}">{{item.itemstring}}</view>
+</view>
+<image src="{{file}}" class="thumb" mode="widthFix" />

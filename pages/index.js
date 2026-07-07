@@ -40,6 +40,10 @@ Page({
       {
         title: '页面穿梭',
         url: './transfer/list/list',
+      },
+      {
+        title: '银行卡识别',
+        url: './ocr/index/index',
       }
     ]
   },

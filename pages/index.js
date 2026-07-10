@@ -2,6 +2,14 @@ Page({
   data: {
     items: [
       {
+        title: '银行卡识别',
+        url: './ocr/index/index',
+      },
+      {
+        title: '任务大厅',
+        url: './task/list/list',
+      },
+      {
         title: '分段组件',
         url: './radiogroup/index',
       },
@@ -40,10 +48,6 @@ Page({
       {
         title: '页面穿梭',
         url: './transfer/list/list',
-      },
-      {
-        title: '银行卡识别',
-        url: './ocr/index/index',
       }
     ]
   },

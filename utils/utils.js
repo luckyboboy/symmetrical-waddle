@@ -44,9 +44,17 @@ let signedParam = (param) => {
   return param
 }
 
+let formatPrice = (price) => {
+  if (price === 0) {
+    return '面议'
+  }
+  return `￥ ${price}`
+}
+
 module.exports = {
   pageSize,
   systemInfo,
   formatResults,
-  signedParam
+  signedParam,
+  formatPrice
 };

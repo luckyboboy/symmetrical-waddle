@@ -1,0 +1,25 @@
+page {
+  background: #f2f2f2
+}
+.item {
+  background: white;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.title {
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.price {
+  color: #f60;
+}
+
+.description {
+  color: #333;
+}
+
+.datetime {
+  color: #888;
+}

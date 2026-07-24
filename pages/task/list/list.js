@@ -9,7 +9,8 @@ Bmob.initialize(
 Page({
   data: {
     taskList: [],
-    pageIndex: 0
+    pageIndex: 0,
+    loadingTip: '上拉加载更多'
   },
   onLoad() {
     this.loadData()
@@ -18,11 +19,16 @@ Page({
     let query = new Bmob.Query('Task')
     const pageSize = utils.pageSize / 4
     query.descending('publishedAt')
-    query.skip = this.data.pageIndex * pageSize
-    query.limit = 4
+    query.skip(this.data.pageIndex * pageSize)
+    query.limit(pageSize)
     query.find().then(res => {
       wx.stopPullDownRefresh()
       let taskList = this.data.taskList
+      if (res.length === 0) {
+        this.setData({
+          loadingTip: '已经没有更多'
+        })
+      }
       taskList = taskList.concat(res.map(item => {
         item.set('formattedPrice', utils.formatPrice(item.get('price')))
         item.set('description', item.get('description').trim())

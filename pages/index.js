@@ -6,7 +6,7 @@ Page({
         url: './ocr/index/index',
       },
       {
-        title: '任务大厅',
+        title: '任务大厅-下拉刷新-上拉加载',
         url: './task/list/list',
       },
       {

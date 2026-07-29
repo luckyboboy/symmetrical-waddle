@@ -1,4 +1,5 @@
 const Bmob = require('../../../utils/bmob')
+const moment = require('../../../utils/moment.min')
 const utils = require('../../../utils/utils')
 // 将db文件夹中的数据导入自己的bmob应用后，改成自己的Application ID以及REST API Key
 Bmob.initialize(
@@ -17,7 +18,7 @@ Page({
   },
   loadData() {
     let query = new Bmob.Query('Task')
-    const pageSize = utils.pageSize / 4
+    const pageSize = utils.pageSize
     query.descending('publishedAt')
     query.skip(this.data.pageIndex * pageSize)
     query.limit(pageSize)
@@ -32,6 +33,7 @@ Page({
       taskList = taskList.concat(res.map(item => {
         item.set('formattedPrice', utils.formatPrice(item.get('price')))
         item.set('description', item.get('description').trim())
+        item.set('publishedAt', moment(item.get('publishedAt')).format('YYYY-MM-DD'))
         return item
       }))
       this.setData({
@@ -56,6 +58,16 @@ Page({
     this.setData({
       pageIndex: 0,
       taskList: []
+    })
+  },
+  copy(e) {
+    wx.setClipboardData({
+      data: this.data.taskList[e.currentTarget.dataset.index].get('href'),
+      success: function (res) {
+        wx.showToast({
+          title: '链接复制成功'
+        })
+      }
     })
   }
 })

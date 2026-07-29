@@ -1,4 +1,4 @@
-<view class="item" wx:for="{{taskList}}" wx:key="sn">
+<view class="item" wx:for="{{taskList}}" wx:key="sn" bindtap="copy" data-index="{{index}}">
   <view class="title">{{item.title}}</view>
   <view class="price">{{item.formattedPrice}}</view>
   <text class="description">{{item.description}}</text>

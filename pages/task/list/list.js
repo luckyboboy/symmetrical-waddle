@@ -19,7 +19,7 @@ Page({
   loadData() {
     let query = new Bmob.Query('Task')
     const pageSize = utils.pageSize
-    query.descending('publishedAt')
+    query.descending('createdAt')
     query.skip(this.data.pageIndex * pageSize)
     query.limit(pageSize)
     query.find().then(res => {
@@ -33,7 +33,7 @@ Page({
       taskList = taskList.concat(res.map(item => {
         item.set('formattedPrice', utils.formatPrice(item.get('price')))
         item.set('description', item.get('description').trim())
-        item.set('publishedAt', moment(item.get('publishedAt')).format('YYYY-MM-DD'))
+        // item.set('publishedAt', moment(item.get('publishedAt')).format('YYYY-MM-DD'))
         return item
       }))
       this.setData({

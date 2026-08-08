@@ -2,7 +2,7 @@
   <view class="title">{{item.title}}</view>
   <view class="price">{{item.formattedPrice}}</view>
   <text class="description">{{item.description}}</text>
-  <view class="datetime">{{item.publishedAt}}</view>
+  <view class="datetime">{{item.createdAt}}</view>
 </view>
 <!-- 提示语 -->
 <loading-tips loading-tip="{{loadingTip}}"></loading-tips>

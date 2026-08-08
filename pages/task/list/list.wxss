@@ -8,8 +8,9 @@ page {
 }
 
 .title {
-  font-size: 18px;
+  font-size: 22px;
   padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 .price {

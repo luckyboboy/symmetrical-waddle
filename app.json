@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/task/list/list",
     "pages/index",
+    "pages/task/list/list",
     "pages/ocr/index/index",
     "video/list/list",
     "pages/transfer/list/list",
@@ -27,16 +27,16 @@
     "selectedColor": "#48c23d",
     "list": [
       {
-        "pagePath": "video/list/list",
-        "iconPath": "images/icon_home.png",
-        "selectedIconPath": "images/icon_home_selected.png",
-        "text": "视频"
-      },
-      {
         "pagePath": "pages/index",
         "iconPath": "images/icon_cate.png",
         "selectedIconPath": "images/icon_cate_selected.png",
         "text": "实例"
+      },
+      {
+        "pagePath": "video/list/list",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png",
+        "text": "视频"
       }
     ]
   }

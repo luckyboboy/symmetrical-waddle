@@ -2,12 +2,12 @@ Page({
   data: {
     items: [
       {
-        title: '银行卡识别',
-        url: './ocr/index/index',
+        title: '无限加载',
+        url: './task/list/list',
       },
       {
-        title: '任务大厅-下拉刷新-上拉加载',
-        url: './task/list/list',
+        title: '银行卡识别',
+        url: './ocr/index/index',
       },
       {
         title: '分段组件',

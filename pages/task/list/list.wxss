@@ -18,9 +18,9 @@ page {
 }
 
 .description {
-  color: #333;
+  color: #555;
 }
 
 .datetime {
-  color: #888;
+  color: #aaa;
 }

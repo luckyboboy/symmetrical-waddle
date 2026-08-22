@@ -30,9 +30,10 @@ Page({
           loadingTip: '已经没有更多'
         })
       }
+      res = utils.formatResults(res)
       taskList = taskList.concat(res.map(item => {
-        item.set('formattedPrice', utils.formatPrice(item.get('price')))
-        item.set('description', item.get('description').trim())
+        item.price = utils.formatPrice(item.price)
+        item.description = ( item.description.trim())
         // item.set('publishedAt', moment(item.get('publishedAt')).format('YYYY-MM-DD'))
         return item
       }))

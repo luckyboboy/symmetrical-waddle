@@ -1,6 +1,6 @@
 <view class="item" wx:for="{{taskList}}" wx:key="sn" bindtap="copy" data-index="{{index}}">
   <view class="title">{{item.title}}</view>
-  <view class="price">{{item.formattedPrice}}</view>
+  <view class="price">{{item.price}}</view>
   <text class="description">{{item.description}}</text>
   <view class="datetime">{{item.createdAt}}</view>
 </view>

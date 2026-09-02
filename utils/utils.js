@@ -48,7 +48,7 @@ let formatPrice = (price) => {
   if (price === 0) {
     return '面议'
   }
-  return `￥ ${price}`
+  return `￥${price}`
 }
 
 module.exports = {

@@ -63,12 +63,19 @@ Page({
   },
   copy(e) {
     wx.setClipboardData({
-      data: this.data.taskList[e.currentTarget.dataset.index].get('href'),
+      data: this.data.taskList[e.currentTarget.dataset.index].href,
       success: function (res) {
         wx.showToast({
           title: '链接复制成功'
         })
       }
     })
-  }
+  },
+  onShareAppMessage() {
+		// 微信分享
+		return {
+			title: '任务大厅',
+			desc: '小程序外包项目'
+		}
+	}
 })

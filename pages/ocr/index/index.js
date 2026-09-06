@@ -60,5 +60,12 @@ Page({
         })
       }
     })
-  }
+  },
+  onShareAppMessage() {
+		// 微信分享
+		return {
+			title: '银行卡OCR',
+			desc: '智能识别银行卡号'
+		}
+	}
 })

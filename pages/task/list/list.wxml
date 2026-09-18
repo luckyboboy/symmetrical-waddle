@@ -2,7 +2,10 @@
   <view class="title">{{item.title}}</view>
   <view class="price">{{item.price}}</view>
   <text class="description">{{item.description}}</text>
-  <view class="datetime">{{item.createdAt}}</view>
+  <view class="datetime">
+    <view>收录: {{item.createdAt}}</view>
+    <view>发布: {{item.publishedAt}}</view>
+  </view>
 </view>
 <!-- 提示语 -->
 <loading-tips loading-tip="{{loadingTip}}"></loading-tips>

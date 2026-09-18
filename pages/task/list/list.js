@@ -33,8 +33,7 @@ Page({
       res = utils.formatResults(res)
       taskList = taskList.concat(res.map(item => {
         item.price = utils.formatPrice(item.price)
-        item.description = ( item.description.trim())
-        // item.set('publishedAt', moment(item.get('publishedAt')).format('YYYY-MM-DD'))
+        item.publishedAt = moment(item.publishedAt).format('YYYY-MM-DD')
         return item
       }))
       this.setData({

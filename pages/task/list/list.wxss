@@ -3,9 +3,10 @@ page {
 }
 .item {
   background: white;
-  margin: 10px 0;
+  margin: 12px;
   padding: 0 20px;
   padding-bottom: 5px;
+  border-radius: 10px;
 }
 
 .title {
@@ -27,4 +28,8 @@ page {
 .datetime {
   color: #aaa;
   font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

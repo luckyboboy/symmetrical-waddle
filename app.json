@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/task/list/list",
     "pages/index",
+    "pages/task/list/list",
     "pages/ocr/index/index",
     "video/list/list",
     "pages/transfer/list/list",

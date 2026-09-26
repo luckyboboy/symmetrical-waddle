@@ -8,7 +8,7 @@
 
 var Bmob = require('../../utils/bmob.js');
 const utils = require('../../utils/utils')
-
+Bmob.initialize("4552ad36df85c1f29953ae3679c69248", "1d1136d0ff2c112fd3b86cb4368126f1");
 var that;
 var page;
 var pageSize = 3;

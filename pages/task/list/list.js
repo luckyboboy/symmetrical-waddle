@@ -29,16 +29,17 @@ Page({
         this.setData({
           loadingTip: '已经没有更多'
         })
+      } else {
+        res = utils.formatResults(res)
+        taskList = taskList.concat(res.map(item => {
+          item.price = utils.formatPrice(item.price)
+          item.publishedAt = moment(item.publishedAt).format('YYYY-MM-DD')
+          return item
+        }))
+        this.setData({
+          taskList: taskList
+        })
       }
-      res = utils.formatResults(res)
-      taskList = taskList.concat(res.map(item => {
-        item.price = utils.formatPrice(item.price)
-        item.publishedAt = moment(item.publishedAt).format('YYYY-MM-DD')
-        return item
-      }))
-      this.setData({
-        taskList: taskList
-      })
     })
   },
   onPullDownRefresh: function () {

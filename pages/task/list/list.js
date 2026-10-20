@@ -34,6 +34,7 @@ Page({
         taskList = taskList.concat(res.map(item => {
           item.price = utils.formatPrice(item.price)
           item.publishedAt = moment(item.publishedAt).format('YYYY-MM-DD')
+          item.more = false
           return item
         }))
         this.setData({
@@ -69,6 +70,14 @@ Page({
           title: '链接复制成功'
         })
       }
+    })
+  },
+  showMore(e) {
+    const index = e.currentTarget.dataset.index
+    let taskList = this.data.taskList
+    taskList[index].more = !taskList[index].more
+    this.setData({
+      taskList: taskList
     })
   },
   onShareAppMessage() {

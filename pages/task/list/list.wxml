@@ -1,10 +1,13 @@
-<view class="item" wx:for="{{taskList}}" wx:key="sn" bindtap="copy" data-index="{{index}}">
+<view class="item" wx:for="{{taskList}}" wx:key="sn" bindtap="showMore" data-index="{{index}}">
   <view class="title">{{item.title}}</view>
   <view class="price">{{item.price}}</view>
-  <text class="description">{{item.description}}</text>
+  <view class="description" wx:if="{{item.more}}">
+    <text>{{item.description}}</text>
+    <view class="datetime">发布于: {{item.publishedAt}}</view>
+    <view class="copy" catchtap="copy" data-index="{{index}}">复制链接地址</view>
+  </view>
   <view class="datetime">
-    <view>收录: {{item.createdAt}}</view>
-    <view>发布: {{item.publishedAt}}</view>
+    <view>{{item.createdAt}}</view>
   </view>
 </view>
 <!-- 提示语 -->

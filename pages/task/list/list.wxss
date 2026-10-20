@@ -28,8 +28,8 @@ page {
 .datetime {
   color: #aaa;
   font-size: 14px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.copy {
+  color: rgb(0, 122, 204);
 }

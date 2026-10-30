@@ -6,6 +6,10 @@ Page({
         url: './task/list/list',
       },
       {
+        title: '外汇牌价',
+        url: './exchange/list/list',
+      },
+      {
         title: '银行卡识别',
         url: './ocr/index/index',
       },

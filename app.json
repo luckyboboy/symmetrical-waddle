@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index",
+    "pages/exchange/list/list",
     "pages/task/list/list",
     "pages/ocr/index/index",
     "video/list/list",

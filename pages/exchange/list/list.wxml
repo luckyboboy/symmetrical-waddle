@@ -1,0 +1,6 @@
+<view class="datetime">{{publishedAt}}</view>
+<view class="item" wx:for="{{ticker}}" wx:key="">
+  <view class="title">{{item.currency}}</view>
+  <view class="buy">{{item.buy}}</view>
+  <view class="sell">{{item.sell}}</view>
+</view>

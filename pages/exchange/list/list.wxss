@@ -1,5 +1,6 @@
 page {
-  background: #f2f2f2
+  background: #f2f2f2;
+  padding-bottom: 10px;
 }
 
 .item {
@@ -14,20 +15,23 @@ page {
 }
 
 .title {
-  font-size: 22px;
+  font-size: 20px;
   flex: 2;
+}
+
+.price {
+  text-align: center;
+  font-size: 18px;
 }
 
 .buy {
   color: green;
   flex: 1;
-  text-align: center;
 }
 
 .sell {
   color: #f60;
   flex: 1;
-  text-align: center;
 }
 
 .datetime {

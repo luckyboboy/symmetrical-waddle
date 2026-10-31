@@ -21,11 +21,15 @@ Page({
     query.descending('createdAt')
     query.skip(this.data.pageIndex * pageSize)
     query.limit(pageSize)
-    query.find().then(res => {
+    query.find().then(result => {
+      let res = result[0]
       res = utils.formatResults(res)
+      res.ticker = res.ticker.filter(item => {
+        return item.buy !== 0 && item.sell !== 0
+      })
       wx.stopPullDownRefresh()
-      let ticker = res[0].ticker
-      let publishedAt = res[0].publishedAt
+      let ticker = res.ticker
+      let publishedAt = res.publishedAt
       console.log(res)
       this.setData({
         ticker: ticker,

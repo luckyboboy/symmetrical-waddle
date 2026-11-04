@@ -1,0 +1,30 @@
+<view class="page">
+  <form bindsubmit="formSubmit">
+    <view class="page__bd">
+      <view class="weui-cells__title">添加</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">标题</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入标题" name="title" value="{{title}}" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">日期</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="date" value="{{publishedAt}}" bindchange="bindDateChange">
+              <view class="weui-input">{{publishedAt}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+      <view class="weui-btn-area">
+        <button form-type="submit" class="weui-btn" type="primary">确定</button>
+      </view>
+    </view>
+  </form>
+</view>

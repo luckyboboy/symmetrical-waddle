@@ -1,7 +1,13 @@
 // 初始化AV
 App({
   onLaunch: function () {
-    
+    if (!wx.cloud) {
+      console.error('请使用 2.2.3 或以上的基础库以使用云能力')
+    } else {
+      wx.cloud.init({
+        traceUser: true,
+      })
+    }
   },
   share: function () {
     let pages = getCurrentPages() //获取加载的页面

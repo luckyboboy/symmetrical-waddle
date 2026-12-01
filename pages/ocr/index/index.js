@@ -1,5 +1,17 @@
 const utils = require('../../../utils/utils')
 Page({
+  data: {
+    items: [
+      {value: 'ocr_generalocr', title: '通用', checked: 'true'},
+      {value: 'ocr_creditcardocr', title: '银行卡'}
+    ],
+    type: 'ocr_generalocr'
+  },
+  radioChange: function(e) {
+    this.setData({
+      type: e.detail.value
+    });
+  },
   choose() {
     wx.chooseImage({
       success: (res) => {
@@ -23,12 +35,12 @@ Page({
       time_stamp: (Date.now() / 1000).toFixed(),
       nonce_str: Math.random()
     }
-    this.upload(utils.signedParam(params))
+    this.upload(utils.signedParam(params), this.data.type)
   },
-  upload(params) {
+  upload(params, type) {
     // console.log(params)
     wx.request({
-      url: 'https://api.ai.qq.com/fcgi-bin/ocr/ocr_creditcardocr', // 仅为示例，并非真实的接口地址
+      url: `https://api.ai.qq.com/fcgi-bin/ocr/${type}`, // 仅为示例，并非真实的接口地址
       data: params,
       method: 'POST',
       header: {
@@ -40,12 +52,15 @@ Page({
         if (res.data.data.item_list.length === 0) {
           wx.showModal({
             title: '识别失败',
-            content: '这可能不是一张银行',
+            content: '这道题有点难',
             showCancel: false
           })
         } else {
           this.setData({
-            info: res.data.data.item_list
+            info: res.data.data.item_list,
+            content: res.data.data.item_list.reduce((first, second) => {
+              return first.itemstring + second.itemstring
+            })
           })
         }
       }

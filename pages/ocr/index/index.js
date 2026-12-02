@@ -56,11 +56,13 @@ Page({
             showCancel: false
           })
         } else {
+          let content = ''
+          res.data.data.item_list.forEach((item) => {
+            content += item.itemstring
+          })
           this.setData({
             info: res.data.data.item_list,
-            content: res.data.data.item_list.reduce((first, second) => {
-              return first.itemstring + second.itemstring
-            })
+            content: content
           })
         }
       }
